@@ -1,3 +1,6 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+
 * Reference files
 ** [[file:projectSpecification.pdf][Project Specification Document]]
 ** [[file:example.json][Sample json file]]
@@ -5,8 +8,6 @@
 ** [[file:userStories_teamName.docx][Sample User Stories]]
 ** [[file:dailyStandupRecord_teamName.docx][Sample Daily Standup]]
 * Initial Planning
-** TODO Research ways that Emacs or org-mode can integrate with scrum methodology.
-** TODO Host this org folder on the web (docker?).
 ** Sprint Planning
 *** TODO Set a date and time to do sprint planning.
 ** Daily Stand-Up
