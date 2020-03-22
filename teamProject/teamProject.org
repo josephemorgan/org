@@ -1,0 +1,19 @@
+* Reference files
+** [[file:projectSpecification.pdf][Project Specification Document]]
+** [[file:example.json][Sample json file]]
+** [[file:backlog_teamName.xlsx][Sample Backlog]]
+** [[file:userStories_teamName.docx][Sample User Stories]]
+** [[file:dailyStandupRecord_teamName.docx][Sample Daily Standup]]
+* Initial Planning
+** TODO Research ways that Emacs or org-mode can integrate with scrum methodology.
+** TODO Host this org folder on the web (docker?).
+** Sprint Planning
+*** TODO Set a date and time to do sprint planning.
+** Daily Stand-Up
+*** TODO Set a time to do daily stand-ups.
+** Sprint Review
+*** TODO Set a date and time to do sprint review.
+** Sprint Retrospective.
+*** TODO Set a date and time to do sprint retrospective.
+* Backlog
+* Sprint 1

@@ -1,0 +1,21 @@
+* Workstation config
+** DONE Figure out conditionals in config files
+** DONE Get spellcheck ironed out 
+** DONE Learn Magit
+** DONE Get java dev environment set up
+:LOGBOOK:
+CLOCK: [2020-02-20 Thu 21:35]--[2020-02-20 Fri 22:15] =>  0:40
+:END:
+  [2020-02-20 Thu]
+  * https://github.com/dlenski/openconnect/tree/globalprotect
+*** DONE Set up java environment emacs
+** DONE Fix Windows installation
+** TODO Create torrent sort script
+* Stuff to learn
+** TODO [#C] [[https://blog.jethro.dev/posts/capturing_inbox/][Article on how to use org mode]] 
+** TODO [#B][[https://linuxconfig.org/a-hands-on-introduction-to-docker-container][ Article on Docker]]
+:LOGBOOK:
+CLOCK: [2020-02-21 Fri 19:40]--[2020-02-21 Fri 21:02] =>  1:22
+CLOCK: [2020-02-21 Fri 19:05]--[2020-02-21 Fri 19:31] =>  0:26
+:END:
+** TODO [#B] [[https://www.atlassian.com/git/tutorials/syncing][Git Remote | Atlassian Git Tutorial]]

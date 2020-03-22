@@ -1,0 +1,941 @@
+#+TODO: TODO WORKING FINISHED | SUBMITTED CANCELED MISSED
+#+FILETAGS: :@school:
+
+* Calendar
+** Regular Class Meetings
+*** CSC 130 - Class                                               :@csc130:
+<2020-01-20 Mon 10:00 +1w><2020-01-22 Wed 10:00 +1w>
+*** Csc 60 - Class                                                 :@csc60:
+<2020-01-20 Mon 17:30 +1w><2020-01-22 Wed 17:30 +1w>
+*** CSC 131 - Class                                               :@csc131:
+<2020-01-21 Mon 17:30 +1w><2020-01-23 Wed 17:30 +1w>
+** Exams
+*** CSC60 - Midterm 1                                        :@csc60:@exam:
+<2020-02-24 Mon 17:30>
+*** CSC60 - Midterm 2
+<2020-03-25 Wed>
+*** CSC130 - Midterm                                        :@csc130:@exam:
+<2020-03-11 Wed>
+* CSC 60                                                             :@csc60:
+** Assignments
+*** SUBMITTED Create Shell Script
+DEADLINE: <2020-02-03 Mon>
+*** SUBMITTED 3 Shell Scripts
+DEADLINE: <2020-02-14 Fri>
+*** SUBMITTED Tax Calculator
+*** SUBMITTED [#A] is_pangram assignment
+DEADLINE: <2020-02-27 Thu>
+:LOGBOOK:
+CLOCK: [2020-02-20 Thu 15:49]--[2020-02-20 Thu 16:55] =>  1:06
+:END:
+*** SUBMITTED binary_converter assignment
+DEADLINE: <2020-02-27 Thuk
+*** SUBMITTED Array assignment
+DEADLINE: <2020-03-04 Wed>
+:LOGBOOK:
+CLOCK: [2020-02-23 Sun 18:00]--[2020-02-23 Sun 18:45] =>  0:45
+:END:
+*** SUBMITTED Assignment using Pointers
+DEADLINE: <2020-03-08 Sun>
+:LOGBOOK:
+CLOCK: [2020-03-07 Sat 16:53]--[2020-03-07 Sat 17:58] =>  1:05
+:END:
+unsigned int sum = 0x89ABCDEF;
+
+  umsigned int iData [  ] = {  0xFF00FF15, 0xFF00FF14, 0xFF00FF13, 0xFF00FF12 } ;
+
+  unsigned int *Ptr1 , *Ptr2; 
+
+ 
+
+1.   Ptr1 =   _____  sum ;  
+
+Fill in the blank,  I need Ptr1 point to sum
+
+Answer :  Ptr1 = &sum
+
+ 
+
+2.    printf ( "  %#x  ",    ____ Ptr1 ) ;  // Fill in the blank , I need to dereference to print
+
+      Answer :  printf(" %#x ", *Ptr1);
+
+  
+
+3.    Ptr2 = _________ ; 
+
+      Fill in the blank ,  I need Pr2 point to the array iData
+
+      Answer : Ptr2 = iData;
+
+ 
+
+4.   printf ( " %#x ",   *Ptr2 ) ;  .// what does it print now
+
+      Answer : 0xFF00FF15
+
+ 
+
+Then,  I am incrementing the pointer Ptr2 like this statement below.
+
+Ptr2++ ;  
+
+ 
+
+5.   printf ( " %#x ",   *Ptr2 ) ;  .// what does it print now
+0xFF00FF14
+ 
+
+Then,  I am incrementing sPtr2 again twice like this statement below. 
+
+Ptr2++ ; 
+
+Ptr2++ ; 
+
+ 
+
+6.  printf ( " %#x ",   *Ptr2 ) ;  .// what does it print now 
+0xFF00FF12
+ 
+
+Let us now have this statement below.  make Ptr2 point to Ptr1.  
+
+Ptr2 = Ptr1 ;
+
+ 
+
+7.  printf ( " %#x ",   *Ptr2 ) ;  .// what does it print now 
+0x89ABCDEF
+ 
+
+ 
+
+//  now consider this   , answer question 8 and 9 
+
+unsigned int y = 0x89AB45CD ;
+
+Ptr1 = &y ;   
+
+Ptr2   =   Ptr1 ;
+
+ 
+
+ 
+
+8.   printf ( "  %#x \n  ", * Ptr1 ) ;  .// what does it print 
+0x89AB45CD
+ 
+
+9.  printf ( "  %#x \n  ", *Ptr2 ) ;  .// what does it print 
+0x89AB45CD
+ 
+
+10.   
+
+y = 0x45CD89AB ;
+
+printf ( "  %#x \n  ", * Ptr1 ) ;  .// what does it print 
+
+0x45CD89AB ;
+ 
+
+ 
+
+// consider this and answer Question 11 and 12
+
+Ptr2 =  iData + 2 ;
+
+Ptr1 = Ptr2  ;
+
+   
+
+11.  printf ( "  %#x  ",   * Ptr1 ) ;  .// what does it print
+0xFF00FF13
+ 
+
+Ptr2 =  iData + 1 ;
+
+12.  printf ( " %#x  " ,   *  Ptr2 ) ;  .// what does it print
+0xFF00FF14
+ 
+
+ 
+
+// we are then defining a new array,  answer Question 13 and 14 
+
+ 
+
+unsigned short   dataBuf [ 4 ]  =  {  0xFF00, 0x0F0E, 0xdead, 0xbeef}  ;
+
+ 
+
+13.    Is the next statement correct ?
+
+dataBuf++   ;
+No, you can't reassign arrays
+
+
+14:   Is the next statement correct ?
+
+dataBuf =  20 ;    
+No, you can't reassign arrays
+    
+
+ 
+
+ 
+
+  Consider the below statements and answer question 15 and Question 16 
+
+   unsigned char count ;
+
+ 
+
+   
+
+Question 15. What is the problem with that statement ? 
+
+  unsigned char \*extraPtr1 = 10 ;   // Question 15 
+  Can't assign integer to variable of type char\*
+
+ 
+
+Question 16. What is the problem with that statement ? 
+
+unsigned char extraPtr2 =  &count ;     
+Can't assign pointer to variable of type unsigned char
+
+ 
+
+ 
+
+Consider this and answer Question 17 and 18
+
+ unsigned short sh ;
+
+   
+
+  17:  is that a good  statement  ? 
+
+   unsigned short \*shortPtr1 = sh  ;   //  Question 17
+   No, you're trying to assign an (uninitialized) unsigned short to a variable of type unsigned short\*
+
+ 
+18:  is that a good  statement  ? 
+
+   unsigned short \*shortPtr2 = &sh  ;   // Question 18
+   This looks fine, you're assigning a pointer to an unsigned short to a variable of type unsigned short\*.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+// consider these statements below and answer 19 - 20 .
+
+         unsigned int numData [ 10 ] = { 0x19, 0xFF12FF13, 0xFF00FF12, 0x43, 0x87, 0x34 } ;
+
+          int *numPtr = numData + 1 ;
+
+          numPtr  = numPtr + 1 ;
+
+ 
+
+19: 
+
+  what is the value  *numPtr ;   
+  0xFF00FF12
+
+ 
+
+ 20.        *numPtr = *numPtr + 20 ;
+ 0xFF00FF26
+
+what is the value of *numPtr;
+*** SUBMITTED Using Pointers and Array
+DEADLINE: <2020-03-14 Sat>
+:LOGBOOK:
+CLOCK: [2020-03-07 Sat 18:01]--[2020-03-07 Sat 19:27] =>  1:26
+:END:
+[[file:~/dev/60/pointers_array_assignment/pointers_arrays.c][C file]]
+*** TODO String library functions
+DEADLINE: <2020-03-18 Wed>
+* CSC 130                                                           :@csc130:
+** Assignments
+*** SUBMITTED [#A] Quiz 1
+DEADLINE: <2020-02-21 Fri>
+*** TODO [#A] CSC130 Group Project
+DEADLINE: <2020-05-13 Wed>
+* CSC 131                                                           :@csc131:
+** Assignments
+*** SUBMITTED Upload flow chart drawing
+DEADLINE: <2020-02-01 Sat>
+*** SUBMITTED Assignment#1
+DEADLINE: <2020-02-16 Sun>
+*** SUBMITTED CSC131 Assignment 2
+DEADLINE: <2020-03-05 Thu 17:00>
+
+*** TODO [[file:teamProject/.#teamProject.org][Group Project]]                                           :@project:
+* PHILS 103                                                       :@phils103:
+** How-to:
+[[/home/joe/Downloads/guide.pdf][Discussion Guide]]
+** Week 1
+*** Assignments
+**** SUBMITTED DONE Quiz 1: Introduction on applying ethics being hard
+DEADLINE: <2020-02-01 Sat>
+- Create a proposal for a final exam question
+- Implication question
+- "Do applied ethicists give arguments that get people to believe their conclusion because it's the only rational conclusion to reach? I'm afraid that the answer is not usually."  What does the professor mean by this statement?
+- [ ] Applied ethics is a less-rigorous discipline of philosophy than most other disciplines. Because of this, arguments based on applied ethics tend to be unconvincing.
+- [ ] How persuasive applied ethics arguments are depends on the values, ends, aims, etc. of the recipient. Equally well reasoned arguments can have wildly different conclusions.
+- [ ] Ethics are entirely subjective, it is impossible to make objectively good arguments about matters of applied ethics.
+- [ ] People are extremely stubborn about ethical arguments. Solving applied ethics problems in an objectively rational way is always possible, but people frequently refuse to listen to and evaluate those arguments.
+**** SUBMITTED [3/3] Discussion 1, Is applying ethics more difficult than most people think it is?
+This Prompt is a bit longer because there are no required readings for Module 1.
+
+Listen to Professor Swan's introductory lecture. Then, consider these words of Adam Smith:
+
+"Some general, and even systematical, idea of the perfection of policy and law, may no doubt be necessary for directing the views of the statesman. But to insist upon establishing, and upon establishing all at once, and in spite of all opposition, every thing which that idea may seem to require, must often be the highest degree of arrogance. It is to erect his own judgment into the supreme standard of right and wrong. It is to fancy himself the only wise and worthy man in the commonwealth, and that his fellow-citizens should accommodate themselves to him and not he to them."
+
+Now consider the following questions:
+
+What is Smith's point - the point he is making in his quote?  (For example, what sort of thing is he criticizing?)  Do you agree with Smith's point? Why or why not?  What do you think Smith's point might have to do with the point Professor Swan is making in the introductory lecture?  Do you agree with Swan's point - the point he is making in his introductory lecture? Why or why not?  Finally, write on the yes-or-no target question for this prompt:
+
+Is applying ethics more difficult than most people think it is?
+***** SUBMITTED Long Reply
+DEADLINE: <2020-01-29 Wed>
+- Long Reply: 1 - The largest difficulty stems from keeping an open mind
+
+PW: Adam Smith's quote illuminates a near-universal aspect of human nature and describes one way that applying ethics is more difficult than people commonly think it is. When we think about the difficulty of applying ethics, we frequently imagine situations where we struggle to know what the 'right' thing to do is. I feel like this is the type of ethical dilemma that we're the most familiar with, and I think most people have an appreciation for how difficult those dilemmas can be. Adam Smith's dilemma is of a different sort. Mr. Smith describes a situation where an individual is certain of their ethical framework that they blindly apply that framework to the unique situations of everyone around them. This is an ethical dilemma of recognizing your own limits. I think that people very frequently underestimate the difficulty of knowing when and how it's appropriate to apply their ethical frameworks to the liberties of others, if they understand that there is a reason to do so at all. Adam Smith applies this idea to governments, but it can be applied equally to any organization that enforces rules upon others, including corporations. (1)
+
+GED: Another element that makes applying ethics more difficult than we may be aware of is dealing with our own cultural and historical biases. We all have values that are influenced by our upbringing. I believe that most people are naturally inclined to want to behave in an ethical way, but it is common to face conflict in knowing exactly what that means for us in each situation. We may encounter a well-reasoned ethical argument for choosing a particular course of action and immediately face a great deal of personal turmoil in reconciling it with our personal biases. In my experience, it's common for individuals to avoid this type of internal conflict by ignoring arguments that conflict with things that they already believe. Having said this, it's important to note that cultural and historical values are in no way invalid bases for ethical systems. Recognizing the origin of the values that we take for granted can help us understand why we agree or disagree with various ethical positions. (1)
+***** SUBMITTED Medium Replies
+DEADLINE: <2020-02-02 Sun>
+***** SUBMITTED Short Replies
+DEADLINE: <2020-02-01 Sat>
+
+** Week 2
+*** Notes
+**** 4 Ways colleges can address ethics in computer science
+- Does using a service imply consent?
+- Focus on real-world applications of emerging tech.
+- Consider diverse academic perspective for ethics
+- Discuss existing industry standards
+- Develop systematic methods to analyze societal issues.
+**** Programmers need ethics when designing the technologies that influence people's lives
+- Computer scientists are the only ones who understand how certain critical system in society work
+- A code of ethics is crucial
+- Hippocratic oath is the classical example, Computer Scientists are not unlike Doctors
+- We should be careful not to create systems that are biased towards groups
+**** The thorny ethics of computer programming
+- Which ethical lines will you not cross?
+- Bill Sourour wrote a medication advertisement disguised as a fun survey. The medication had negative side effects and may have contributed to the death of a girl.
+- Computer scientists rule the world, even if they don't want to
+- How many computer scientists recognize the ethical issues they encounter?
+- Machine learning rules are not human readable.
+- If we refuse to build it, they'll just get someone else. Doesn't mean we should just give up without a fight.
+**** Should software developers have a code of ethics
+- Computer science is such a new profession that people haven't had to face serious consequences for ethical decisions.
+- Volkswagon emission cheating, "fake news" on Facebook, Russian hacking and interference, Muslim registry.
+- Any tool can be a weapon depending on how you use it.
+- A tool designed to help a hiring team screen for good candidates may also be used to screen out certain ethnicities.
+- "While one standardized code of ethics could be a solution, it may be more important to teach people how to ask the right questions" - West, relates to last week's discussion post
+- "What do we do to make sure we're having the least harmful impact we can"
+**** We need to work harder to make software engineering more ethical. 
+- Study from North Carolina finds that a code of ethics doesn't appear to make any difference in the decisions made by computer scientists.
+- However, the study wasn't perfect. Individuals were either shown a copy of a code of ethics or simply told ethics are important.
+- "Let's stop writing general guidelines and start being fiercely specific, where we can, about formal rules and consequences for bad behavior"
+- For engineers, lawyers, etc. there is a bar association that can ban a person from practicing if they behave in an unethical way.
+- Twofold way to improve things:
+-- First, people need to be educated about the issues.  Code of ethics, or treaty, needs to have bite for noncompliance.
+- Ethics education is gaining steam, but it can't be a one-off ethics course, it needs to be cultural.
+- Recent legal consequences faced by companies like Volkswagen show that to an extent companies are already bound by codes of ethics that they do not follow.
+**** Why Tech Companies Need a Code of Ethics for Software Development
+- Universities around the US are beginning to offer coerces on CS Ethics.
+- A decent baseline are the 5 values of Scrum: commitment, courage, focus, openness and respect.
+**** Why we must teach ethics along with programming.
+- The power of tech can be co opted by special interest to leave the average citizen out of the benefits.
+- Programmers may assume that that software development is apolitical, but in reality, our actions don't exist in a vacuum. We all have to live with the things programmers create.
+- The idea of 'user stories' can help organizations to be more ethical in building software. Instead of being concerned about govt. or corporate needs, They are concerned with user needs.
+- The tech world needs to introduce more healthy skepticism.
+
+*** Assignments
+**** SUBMITTED DONE Quiz 2: Ethics codes, ethics courses and ethical computing
+DEADLINE: <2020-02-01 Sat>
+**** SUBMITTED [3/3] Discussion 2: Are ethics courses or ethics codes likely to make a computer programmer more ethical
+***** SUBMITTED Long Reply
+DEADLINE: <2020-01-29 Wed>
+Long Reply: 7 Ethical courses or codes can be effective with the right implementation.
+
+Pw: I mostly feel that ethical courses of study and ethical codes can be effective in helping computer scientists behave more ethically when they are implemented in the right way. I acknowledge the results of the North Carolina study mentioned in "We Need to Work Harder to Make Software Engineering More Ethical," however I'm not totally convinced that the methodology of the study was rigorous enough to draw conclusions from. Regardless of that, from a rational perspective, understanding ethical issues is an important prerequisite to making ethical decisions. The purpose of ethical codes and courses of study shouldn't be to enforce one code of ethics upon everyone, but to teach critical thinking skills and encourage people to examine issues from an ethical standpoint. In meeting this goal, I believe that ethical courses and ethical codes are effective. (6)
+
+GED: From a cultural/social standpoint, I think it's clear that our society accepts the role of ethical codes in improving behavior. Many professions that are likely to face ethical problems have an ethical code that they're required to adhere to. In the case of doctors, lawyers and engineers, violation of ethical codes can even lead to a loss of the right to practice a profession.  I think this is an important element of what makes ethical codes in those professions effective. Having consequences for unethical behavior encourages those who may not normally do so to behave ethically. (2)
+
+***** CANCELED Medium Replies
+DEADLINE: <2020-02-01 Sat>
+***** CANCELED Short Replies
+DEADLINE: <2020-02-01 Sat>
+
+** Week 3
+*** Assignments
+**** SUBMITTED [3/3] Discussion Post 3
+***** SUBMITTED Long Reply
+<2020-02-12 Wed>
+***** SUBMITTED Medium Replies
+<2020-02-15 Sat>
+***** SUBMITTED Short Replies
+<2020-02-15 Sat>
+** Week 4
+*** Notes
+**** Cable Compaies are Expirimenting with Metered Data
+- He argues that metered data is good because it prevents those who would only use limited data from getting priced out of the market.
+- Uses a grossly misleading image called "how long would it take to hit 300GB"
+- Modern TV's are in 4k, one person would be able to stream a little over 10 hours a week. With 2 or 3 people in the household, that number is shared between all of them. This is only considering video streaming, which is one of many ways that people use the internet.
+- Author claims that with unmetered connections, the only way to increase profit is to decrease spending. This is only true because cable companies exist without meaningful competition, which could be solved by splitting them up. Regardless of this, the problem could also be solved by recategorizing broadband providors as a utility, eliminiting the profit motive.
+- "And even if we can’t just get over our mental accounting costs, are they really so significant that we should cite them as an excuse for keeping the poor and elderly offline and letting our broadband networks stagnate?" Disingenuous, author has not satisfyingly demonstrated that the consequences necessarily follow from the action.
+**** Net Neutrality Advocates' Concerns are Outdated
+- "ISPs that block or slow content from major providers in an attempt to charge more for the bandwidth are put at a serious competitive disadvantage compared to those ISPs that do not" Except for the fact that most ISP's exist in local monopolies or duopolies, which is the entire reason that regulation is important. Competition can't effectively regulate an industry if there is no competition.
+- Due to incredible start-up costs of building infrastructure and monopolistic contracts that major ISPs have entered into with local municipalities, it is almost impossible for new ISPs to enter the market.
+**** The Dance of Reason
+- Makes the same argument that the 90's were home to the internet Net Neutrality advocates are afraid of, and that competition freely gave birth to the open internet of today without regulation. Ignores the fact that 90's internet used the telephone system as backbone hardware, which made it trivial for new ISPs to compete. With competition came improvement. Modern broadband internet requires ISPs to spend enormous sums of money on backbone infrastructure, which has effectively suffocated competition.
+**** A Magna Carta for the Web
+- 17% in 2007, 40% in 2014.
+- Internet is great, but we have to fight.
+- We love that the internet allows free speech, but we have to fight against censorship.
+- We love how the internet is open, but we build "filter bubbles," which are like echo chambers, that influence our worldview.
+- He wants a private, open, global, innovative web.
+- We need a bill of rights for the web.
+**** The Internet Commons
+- The internet is a commons, which is a public asset that is (a) regarded as of such high value that it is felt by the public that special effort ought to be made to ensure hat it can be experienced or practiced by future generations in perpetuity and (b) it cannot be privately owned or controlled without risking deleterious consequences to its value as a common public asset.
+- "The desire of some ISPs to fast-track – at their discretion – some of the more lucrative Internet sites would clearly diminish the value of the Internet commons to all other users. And if such a special permission were granted, it would very likely not be the last."
+*** Assignments
+**** SUBMITTED [3/3] Discussion Post 4
+DEADLINE: <2020-02-15 Sat>
+***** SUBMITTED Long Reply
+DEADLINE: <2020-02-12 Wed>
+Is achieving net neutrality both possible and worth what we will need to sacrifice to get it?
+
+Long Reply: 8 Net neutrality is achievable and worth whatever minor price has to be paid
+
+PW: As described by Anderson in his article, the internet is a modern commons. Free and open access to the internet is quickly becoming more and more essential not only to participate in modern society, but arguably to have complete autonomy. Without reliable internet access, an individual becomes disadvantaged in education, employment, interpersonal communication, recreation, etc. It's for that reason that I think it's in the best interest of our society to reclassify broadband internet as a utility and to ensure that every citizen has access. The issue doesn't stop at basic access, however. By prioritizing some traffic and deprioritizing others, ISP's are in a unique position to have an enormous effect on the behavior of their users. If an ISP were to launch a service that competes with an existing one, they would only need to deprioritize the existing service's traffic in order to gain an unfair competitive advantage. Perhaps more nefariously, if there was a certain political idea that was bad for an ISP's bottom line, without network neutrality protections the ISP could tip the scales of public opinion against it. The argument that there would be some unreasonable "cost" to enshrining net neutrality in law is unconvincing to me. One disengenuous argument that I've seen is that net neutralilty will stifle the competative market that drives innovation. This is unconvincing to me because of the lack of competition that comes as a result of the enormous cost to build infrastructure as an ISP. There is no competition to stifle. In my opinion, the best solution is to reclassify broadband internet as a utility, and guarantee affordable access to all citizens. (8)
+
+GED: Historically, there was no need for net neutrality. In the 90's, the internet was not nearly as open as it is today. Carriers forced users to connect to their own limited networks. Thankfully, due to the ease of using an existing phone line as infrustructure for an internet connection, it was easy for ISPs to compete with each other and offer improved products. Where consumers had choice, they were able to drive innovation make the internet better for everyone. Unfortunately, the internet of today has outgrown hardwired telephone networks. To open service in a new area, ISPs either have to invest a fortune in wiring, or overcome huge legal hurdles to use existing infrastructure. Without competition, innovation struggles. Unfortunately, there is no easy way to force competition to exist in a market like that of broadband internet. Thankfully, this problem has been solved before in the historical issue of utilities in the US. There already exits a framework for classifying a service as a utility when the (a) the barriers to entry are too high to make competition effective, and (b) the service is essential for a basic quality of life and participation in society. It's my opinion that broadband internet access fits both of those requirements. (1)
+***** SUBMITTED Medium Replies
+DEADLINE: <2020-02-15 Sat>
+Medium Reply
+
+Approach B: Agree
+
+Hey Ryan,
+
+B1: I strongly agree with your stance on this position, so it feels strange to criticize part of it. The most common argument against net neutrality that I've heard (including in our readings for this module) is that 'regulations are bad' for various reasons. Opponents argue that if the internet was largely unregulated since its inception, regulating it now is surely a bad idea. Freedom from regulations took the internet from a closed, limited concept to one that is wildly open in terms of both freedom of speech and freedom to access various material.
+
+B2: I don't think that argument holds a lot of water. One of the key reasons that the internet was able to evolve so easily in the '90's and the early '00's was due to the relatively low barriers to entry for ISP's. When providers tried to favor some content over others, they faced the very real risk of their users switching to a competitor. All a user needed was a connection to a phone line and they had access to a number of ISP's. The world is a different place today, however. Dial-up internet access no longer meets the needs of our ever more connected world. To be able to participate in the enormous benefits that the internet offers, it's almost essential to have a broadband connection. Unfortunately, broadband providers have a much higher barrier to entry than dial-up providers because of the fact that they frequently have to lay miles of copper or fiber to reach customers. This allows them to take advantage of users who only have one or two choices between providers. Disingenuous opponents will frequently use the argument that you mentioned, that net neutrality will somehow harm the competition that exists between ISPs. This argument can be easily dismissed when the effective monopoly or duopoly market that many ISPs operate in is highlighted.
+
+Thanks,Joe
+
+Medium Reply Approach C: Interesting Hey Sophia,
+
+C1: I agree that there are portions of our population that face special difficulties when it comes to being able to afford a broadband internet connection. Personally, I think that internet access in our connected society is quickly becoming something that should be guaranteed to all citizens. Any policy that has the potential to prevent disadvantaged members of society from having access to the enormous benefits of the internet should be very carefully considered.
+
+C2: Having said that, I'm not convinced that metering data should be the solution. While offering discounts to low data users may protect them, charging exorbitant overages to users who go over an arbitrary cap harms those on the other end of the spectrum. I believe a better solution is to reclassify broadband internet as a utility under Title II of the Communications Act of 1934. We should offer subsidized rates for low-income families and individuals, while still eliminating the profit motive that drives providers to take advantage of other users.
+
+C3: Admittedly, there are reasonably compelling arguments against reclassifying broadband internet service as a utility. Some argue that there would be a significantly detrimental effect on innovation in broadband service industry, however I'm unconvinced of that.
+
+C4: To be able to definitively say one way or the other, we would need experimental runs of non-profit, community run broadband. Thankfully, those programs do exist, but we'll probably have to wait a few years to get conclusive evidence on their viability long-term.
+***** SUBMITTED Short Replies
+DEADLINE: <2020-02-15 Sat>
+** Week 5
+*** Assignments
+**** SUBMITTED [#A] [3/3] Discussion Post 4
+DEADLINE: <2020-02-22 Sat>
+***** SUBMITTED [#A] Long Reply
+DEADLINE: <2020-02-19 Wed>
+Q: Is one strategy for dealing with cyber crime superior to all other strategies
+
+Long Reply: 7 I believe that there are fundamentally superior ways of dealing with crime, including cyber crime.
+
+PW: Personally, I strongly agree with the idea that the only time that we should use compulsion (which includes legislation) to force others to behave in a certain way is when we are doing so to protect ourselves or others. I believe that the difficulty is not in justifying that idea, but in determining just how much 'harm' is acceptable before compulsion becomes justified. For example, it would be completely possible for a religious leader to claim that anti-religious speech online is harmful to the readers' spiritual well-being. Under Mill's idea of just interference with others' liberty, blocking anti-religious speech on the internet could be reasonably justified. It seems to me that the interpretation of 'self protection' introduces some nuance that makes a fundamentally meretricious point-of-view difficult to implement in practice. (6)
+
+My conclusion is that the best way of dealing with cyber crime is to adopt an approach where the default is granting liberty rights for any given action. Then, specific behaviors should be outlawed only if they are measurably shown to be harmful to others. I liked the discussion of the the historical idea of the Bill of Rights in relation to liberty rights from the lecture, and think that same approach should be applied to legislating actions online. The idea of being guaranteed basic freedoms from compulsion has served our country extremely well, and I believe the same idea could be adapted to the internet. The sentiment of needing an 'internet bill of rights' is one that's been brought up in other readings that we've done in this class, and it's one that I'm growing to believe is more and more important. (1)
+
+***** SUBMITTED [#A] Medium Replies
+DEADLINE: <2020-02-22 Sat>
+****** Medium Reply 1
+Long Reply-6 I believe centralizing solutions will be a better strategy for dealing with cyber crime.
+
+PW- I believe that using centralizing solutions will be the better approach to cyber-crime. Because centralizing solutions broaden the scope of decision making through democratic means and by looking at the issues from a much wider scope, I believe they can be very effective. By looking at issues with a broader scope we can better form foundations for various issues and build from a more Democratic point of view. By entrusting what the people believe is the right solution we can further strides towards personal privacy while still maintaining a safe and effective form a cyber security. If we begin at the wider angles with an overall consensus the smaller minute details will be better addressed. If done properly it will also lead to more of the population being content with the enforcement of rules and security. (5)
+
+GED-I believe that this will be the better solution, because of how diverse our population is. The truth is we can not make every single person happy with the results, but by gaining a more democratic approach with more input more groups can be served. Whether someone is Republican, democrat or another political party just by being given the sense of involvement in the decision of how something is enforced and understood many people will be more likely to be appeased by final rulings. Corporations and people also feel different about cyber security, so if more diverse thoughts and opinions can be shared and incorporated most people can be placated knowing that they had a voice. There will never be a perfect solution, but the more diversity that can be brought forth the more agreement and “reaching across the so called aisle” can be made. (3)
+
+Medium Reply Approach C: Interesting Hey Sophia,
+
+C1: I like your idea of using centralizing solutions for cyber crime. I am one-hundred-percent with you about democratic solutions being better than autocratic ones. For any legislation that we do pass, it's super important that we factor in as many differing points of view as possible
+
+C2: My only hesitation with completely adopting a centralized solution to diversity of thought and opinion is that we would be have to be very careful not to legislate behaviors that are better left unlegislated. I really liked and agreed with the J. S. Mill's statement that was quoted in our lecture. I think it's super important that we don't restrict behaviors that don't overtly cause harm. For things that we do have to pass laws to prevent, democratic solutions are absolutely better than autocratic ones. However, I think it's important that we resist the urge to impose rules, even if they're democratically created, unless there is a significant reason to do so.
+
+C3: Fundamentally I don't disagree with your viewpoint, however I'm not convinced it's a good idea as a universal, basic rule for the internet. There are many situations that I can think of, especially historically, where the democratic, public opinion is one that oppresses minorities.
+
+C4: In order to adopt a completely centralized approach to legislating behavior on the internet, I think that it would be essential to first have some sort of 'internet bill of rights' to guarantee essential freedoms. Additionally, I believe it would critical to set an objective standard for proving that a behavior causes real harm before laws can be passed restricting it. Ideally, I believe that we should use decentralizing solutions as a default, and only implement centralizing solutions where absolutely necessary.
+
+****** Medium Reply 2
+Long Reply: 3—The world is changing fast, strategies will have to too.
+
+PW: Cyber crimes are a new aspect of human civilization, it took many millennia from the dawn of civilization to create a system to handle conventional crimes as it is. While computers and software and even the internet now have been around for a few decades we are still having to adapt to how people use these technologies as the tech itself continues to change moment by moment. Any one strategy is going to become as outdated as fast. While this is not exclusive to cyber crimes, conventional crimes have this issue too, albeit to a lesser degree. (4)
+
+GED:There will be some strategies on how to deal with cyber crimes that will last for some time, just like conventionally, but tech is moving fast and there is no guarantee of what the future holds. Criminals will always be one step ahead of the law as lawmaking is a reaction to malicious acts. There is also the problem of strategies becoming too draconian and going too far due to the, maybe understandable, ignorance to lawmakers on an ever-changing aspect of society, with the effect of taking our liberties in a venue that many people use and has become an essential part of social interaction. (3)
+
+Matthew
+
+Medium Reply
+
+Approach A: Problematic
+
+Hey Matthew,
+
+A3: While I agree with the position that the nature of legislating the internet presents many new challenges, I believe there are still fundamental ideas that hold true. If a person's viewpoint on legislating the internet is focused on the 'small picture' of individual policies and challenges, I acknowledge that that viewpoint will rapidly become obsolete, as you stated. It's for that reason that I think that 'small picture' viewpoints are fundamentally inferior to viewpoints that are based on the understanding and application of general ethical principles. For example, if someone were to take J. S. Mill's viewpoints relating to individual sovereignty and apply them to internet legislation, those principles would be valid regardless of changes in technology. In other words, just because an application-based viewpoint is liable to become obsolete doesn't mean that all viewpoints are. Personally, I think the lecture's connection to the U.S. Bill of Rights makes this point really well. The liberty rights granted in the first 10 amendments to the constitution have managed to stay relevant and important regardless of enormous changes in our society, regardless of the major societal changes that have taken place in the past nearly 250 years. A legislative agenda founded on an 'internet bill of rights' could guide valid thinking for many decades to come.
+
+- Joe
+  
+****** Medium Reply 3
+Long Reply: 6 yes one way of dealing with cyber crime is superior to all others
+
+PW: The idea of nature, and how it is the idea of life without government or without a state of law defines how we all look at things that we may think are ethically right. Which for the case of cyber crime would not be ethical because people would never think they were wrong or breaking a law. While on the other hand we have the internet that has “revolutionized business and communication almost overnight, laws regulating its use and misuse haven't developed as swiftly”. Thus expressing how the US courts have established that the original computer code is “ intellectual property”, these codes are all protected under the first amendment. Computer laws can vary state by state back in March of 1999, “33 states have enacted their own laws to combat computer crime, while 11 more have laws pending in state legislatures”. These laws all varied in structure and wording but not to intent. Today almost all of the present state laws “criminalize the unauthorized access to or use of computers and databases, using a computer as an instrument of fraud, and known and foreseeable acts of computer sabotage”. (6)
+
+GED: Under the state of nature I would not believe it to be a superior way for dealing with cyber crime because there are no limits that count as authoritative and there are no rules. You can also take into consideration the problem of diversity of thought and opinion. You have the view of the centralizing solutions who believe the “broaden scope of democratic decision-making that is based on the widespread deliberation, debate, then vote”. Then you have the view of the decentralizing solutions who believe that we do not need a single decision about the matter and each can act upon her own ideals within a private. (1)
+
+Lauryn
+
+Medium Reply
+
+Approach B: Agree
+
+Hey Lauren,
+
+B1: I agree that there is probably a way of dealing with cyber crime that's better than others. When you made the statement "for the case of cyber crime would not be ethical because people would never think they were wrong or breaking a law," it occurred to me that someone could disagree with that. In one of our readings, we talked about the difference between Hobbe's and Locke's view of the state of nature. Hobbes believed that, in a state of nature, nobody would have a duty not to violate the rights of others, which is consistent with your statement. Locke's argument was that, even without a state to create laws, we are still bound by 'natural law,' and effectively should 'know better' than to violate the rights of others.
+
+B2: Fortunately, I don't think that argument does much to weaken your general claim. Even if people should 'know better' without laws to prevent bad behavior, there will still always be those who are interested in taking advantage of others. Without laws to reasonable laws to prevent harm, the internet provides tremendous access to vulnerable people for bad actors.
+
+-Joe
+***** SUBMITTED [#A] Short Replies
+DEADLINE: <2020-02-22 Sat>
+** Week 6
+*** Assignments
+**** SUBMITTED [#A] Do all required readings
+DEADLINE: <2020-02-26 Wed>
+:LOGBOOK:
+CLOCK: [2020-02-26 Wed 20:42]--[2020-02-26 Wed 21:06] =>  0:24
+CLOCK: [2020-02-24 Mon 21:30]--[2020-02-24 Mon 22:08] =>  0:38
+CLOCK: [2020-02-24 Mon 13:31]--[2020-02-24 Mon 16:09] =>  2:38
+CLOCK: [2020-02-23 Sun 20:57]--[2020-02-23 Sun 22:27] =>  1:30
+:END:
+***** Notes
+****** The Hockey Stick of Human Prosperity
+- Human Prosperity was fairly stable until the past century or two, when it exploded.
+- We now have significantly greater health and wealth than any of our ancestors
+****** The User of Knowledge in Society - Hayek
+- If we have all relevant information, have known preferences, and fully understand the available means, the issue of how to create the optimal economic system is one of logic.
+- This actually doesn't help us as a society because it is impossible for an individual to have all of the relevant information.
+- The knowledge required to solve the problem of economics as a society doesn't exist in one place, it exists as contradictory information in the minds of all individuals.
+- Author claims that the character of the fundamental claim has been obscured by modern (to his time, 1945) developments, e.g. in mathematics.
+- The distribution of knowledge is one of the primary problems of designing an efficient economic system.
+- A related problem is whether or not to centralize economic planning.
+- The main ideas are 1) Central planning, 2) Competition, which is essentially decentralized planning, and 3) the delegation of centralized planning to different industries, i.e. monopolies.
+- In the author's opinion, the question of which system is more efficient is the same as the question of whether it's better to transfer the all of the required disparate knowledge to a central entity, or to transfer planning power to the holders of the disparate knowledge.
+- !! Note here that I the author was clearly unaware of future innovations that make communicating knowledge trivial, and he seems to be ignoring potential fairness of an economic system in lieu of efficiency. What specifically is meant by efficiency?
+- Different types of knowledge can be expected to be in the hands of different individuals. Some knowledge is expected to be in the hands of the masses, and some will be expected to be in the hands of suitably chosen experts.
+- The fact that we tend to think that experts are better at making economic decisions than the masses are is because we tend to forget that scientific knowledge is not the only kind of knowledge that's relevant.
+- !! I actually disagree with this statement because I believe the only type of knowledge that should guide policy *is* scientific knowledge, or knowledge gained by rational, scientific methods.
+- Author rightfully points out that stating that experts make better decisions based on science than laymen do is just shifting the difficulty to choosing the experts.
+- The knowledge of the particular circumstances of time and place can arguable be called non-scientific.
+- !! It's very possible that the enormous data gathering abilities of modern computation makes the previous statement less true.
+- Each individual posesses unique advantages over all other individuals in things relating to the unique information that he posesses. Any rational system relating to him would be improved by his cooperation.
+- The author lists many occupations which are far more efficient because of the unique knowledge their specialized participants possess.
+- The problem of making that specialized information available to all persons is one that we have yet to find an answer to.
+- !! This is interesting to me because, although the author couldn't have been aware of this in 1945, we arguably *have* found an answer to that problem, in the modern internet. An enormous amount of information that was once incredibly specialized is now freely available online.
+- According to the author, "Planners" largely believe that change in economic plans should optimally be infrequent.
+- Business people are aware of the truth of the importance of rapid change and adaptation to keep costs down and profitability high. Two identical factories can have entirely different bottom lines depending on how the manager is able to quickly change factors of production.
+- Economists tend to focus on statistical aggregates, which masks the variability that exists due to unique manager knowledge.
+- The author argues that the numbers analyzed by economists are not present in large enough numbers to justify the invocation of 'the law of large numbers' to explain their variety. The average exists because of countless small adjustments by managers.
+- For example, B stepping in where A fails to deliver. The stability of the flow of commerce at the high level is a direct result of competitive forces and individuals using their unique knowledge.
+- The author argues that the knowledge he's referring to that's possessed by managers can't be expressed in statistics, and can't be conveyed to a central authority. Again, here is where modern advancements in computerized statistics may disprove his claim.
+- The author's argument is that central planning can not take into account the minor details of each element of business which may be of huge importance to the manager. Statistics may track a particular material, but it will treat all of each material as being identical, ignorant to evolving differences in quality, price, location, etc.
+- Author argues that the main problem of modern economics is rapid changes in time and place.
+- Because it would be technologically impossible to communicate all of that knowledge to a centralized planning agency, we must find a decentralized solution to making those decisions.
+- **Despite this**, the "man on the spot" cannot be left with making all decisions, because he is unaware of the overall pattern beyond his sphere of influence.
+- Two primary questions: How much knowledge does the man on the spot need to do his job successfully? Which external events are relevant to his decision, and how much of them does he need to know?
+- When relevant facts are dispersed, the 'price' system acts to coordinate the separate actions of different people.
+- The price system solves the problem of how much information to give individual parties. If there is suddenly an increase in demand for tin, purchasers of tin don't need to know *why* the demand has increased. They only need to know that it is more profitably being utilized elsewhere, and because of that, scarcity has increased and there is a greater need to restrict it's use. The price system accomplishes that.
+- The solutions that are derived using price are the same solutions that might be derived by a single mind who has access to all of the relevant information.
+- The price system is fundamentally a method of communicating information.
+- *It is key* that this function is not fulfilled properly when prices become more rigid or more isolated from the laws of supply and demand.
+- With the price systems, individuals need to know relatively little in order to take the 'right' action.
+- The author believes that the price system is one of the greatest achievements of the human mind.
+- !! There is a connection here between this and blockchain currency networks. In a price system, providers are incentivized to support the system by the ability to generate profits. They are kept from generating a burdensome amount of profit by competitors. In blockchain currencies, those who support the system are benefited via the system known as 'mining.'
+- It is wrong to claim that we are benefited by thinking about what we're doing. Civilization advances by increasing the number of things that we can do without thinking about them. - Alfred Whitehead
+- The price system uniquely grants us the ability to choose our own pursuits, while also allowing us free use of our knowledge and abilities.
+- The author acknowledges that the disagreements about the importance of price system, while once political, are now more intellectual and methodological.
+- *good quote:* "The essential utility of the price system consists in inducing the individual, while seeking his own interest, to do what is in the general interest."
+- Professor Schumpeter argues that when consumers evaluate and demand goods, they are also evaluating and demanding the means of production which produces those goods.
+- Author argues that this is unsupported by logic.
+- The valuation of a good doesn't account for means of production that are not fairly negotiated or fully subject to the forces of supply and demand.
+****** The Nature of the Firm - R. H. Coase
+- Sometimes economists fail to fully define their assumptions, Coase is examining the exact meaning of word 'firm' in economic contexts, and as it differs from the common usage.
+- Throughout human history, supply has been adjusted to demand, and production to consumption by a process that works itself: the price system.
+- The price mechanism explains behavior on the large scale, but not behavior for individual 'firms,' at least fully.
+- Those who object to planning on the grounds that the problem is solved by the price system can be answered by pointing out that there is already planning in our system.
+- There are islands of conscious power in the sea of unconscious decision-making that's driven by prices.
+- Managerial decisions can work to suppress the price mechanism.
+- The firm is an island of planned economics.
+- Those against planning will say one moment that price is the coordinating factor in markets, and will say in another that the entrepreneur is the coordinating factor. The author desires to describe when each of those statements is true.
+- Firms allow smaller units (like factories) to coordinate in a way that would be impossible if they were driven by the price system. It reduces the cost of business by eliminating negotiations for contracts that would have to be done by the factory if it were run independently.
+- The operation of the market costs something, and forming an organization with a planner reduces those costs.
+- The author argues that firms don't continually grow because there must be some force that tends to reduce profitability as a firm gets larger.
+- !! I'm not sure this is the case anymore, although it likely once was. Communication and organization were difficult and expensive in the past. Now they are trivial. Perhaps the forces that once worked to prevent monopoly are now reduced in their effectiveness, due to the information revolution.
+- A firm will expand until the costs of organizing an additional transaction within the firm are equal to the costs of organizing that transaction within the market.
+- "Inventions which tend to bring factors of production nearer together, by lessening spatial distribution, tend to increase the size of the firm." This describes the modern phenomenon of super-conglomerates, like Disney. Tech has brought the factors of production virtually 'nearer together.'
+- Some argue that the creation of the firm comes about as a result of the increasing differentiation of labor.
+- The author disagrees, saying that theoretically the price mechanism should be sufficient as an integrating force for the division of labor. He asks the question why it isn't.
+- Knight argues that, if everyone had perfect knowledge, the firm would be unnecessary and that goods would flow from producers to consumers unimpeded.
+- Because producers can't be expected to know exactly what to do and when, managers developed to coordinate efforts.
+- Because producers can't *know* what consumers will want, they need to forecast those wants.
+- Entrepreneurs came about as those specializing in forecasting consumer wants.
+- With entrepreneurs, workers can be assured of a wage, independent of their forecast of consumer wants. These entrepreneurs must be given a 'planning' role to direct business in a successful way.
+- In an efficient economy, those forecasters would be paid according to the value that's produced as a result of their forecasts.
+****** Lecture
+- Capitalism, when wisely managed, can be made to be more efficient than any other system, but could possibly offend our notion of a reasonably satisfactory way of life.
+- Possible positions we can take:
+- Keynes: We need various regulations to eliminate the moral deficiencies of capitalism while taking advantage of it's efficiency.
+- We already do this adequately
+- We don't do this enough
+- The problems we encounter are because we regulate too much, and depart to far from pure capitalism.
+******* What is capitalism?
+- You might think of capitalism of a set of government policies that promote the generation of capitalism, but that's not correct.
+- It is a system of organization of resources, goods and services based on 1 Ownership, and 2 Voluntary exchange.
+- This requires private property rights and markets.
+******** Ownership
+- Property rights secure for property owners control over resources.
+- These rights include some or all of the following:
+The right to use
+The right to exclude
+The right to transfer/exchange
+The right to delegate use
+The right to compensation
+The right to destroy, waste or change
+The right to derive income from the thing you own
+- What can be owned?
+Consumer goods and Producer goods
+land, natural resources
+One's body and labor
+Ideas? Intellectual property rights, right to exclude others from using your ideas
+- In pure capitalism, the control over what you own and the things you can own are very extensive.
+******** Voluntary exchange
+********* Markets and efficiency - The first argument
+- Efficiency is enhanced when goods and services are owned privately and exchanged voluntarily.
+- For the plans of individuals to mesh, we need:
+Settled rules of conduct
+Knowledge
+- We can't plan if we don't have knowledge about how the environment works.
+- Settled rules of conduct are easy, but the knowledge of what else is going on in the economy is very difficult to obtain.
+- Hayek believes that markets solve the knowledge problem because price communicates the relative scarcity of goods.
+- Others can't know our personal and local knowledge, but we need to know the personal and local knowledge of others to make efficient economic decisions. Price communicates that information.
+- The argument for capitalism: If markets are to convey as much information as possible, as many resources as possible must be subject to the market.
+- Without private property in the means of production, there would be no market in the means of production.
+- Without markets in the means of production, there will be no money price to the means of production
+- Without money prices for the means of production, there will be no indicators to the relative scarcity of the means of production
+- Without indicators of the relative scarcity of the means of production, there can be no rational allocation of the means of production.
+********* Markets and Mutual Benefit - The second argument
+- Consider the difference between zero sum and positive sum games.
+- Markets are sometimes seen as zero sum games, but that may not be the case.
+- Markets generate mutual benefit.
+********* Markets and Mutual Respect - The third argument
+- Markets are about cooperation among people with different aims.
+- Studies show that societies that don't have trust between people don't have markets.
+******** Is capitalism a legitimate social arrangement?
+- There are many arguments that markets are good, in order to have markets you need ownership and voluntary exchange.
+********* Concerns about capitalism.
+- The power of huge, multinational firms
+********** Why do we have such huge firms?
+- There are advantages to making a company larger.
+- It's cheaper to have employees than contractors to do your work.
+- Transaction costs (such as search, information, bargaining and enforcement) are higher when dealing with other firms than they are when dealing with yourself.
+- Coase argued that there should be a limit to how large a firm can grow.
+- There is a natural cost to growing a firm that comes from the marginal reduction in efficiency that is a result of operating outside of the price system for internal interactions. That cost is balances by the benefits, which creates a soft upper limit to he size of a firm. In other words, when external transaction costs are higher than internal costs, the company will grow, and vice versa.
+********* What are the effects of government regulation?
+- Are there policies that can subsidize the growth of a corporation?
+- If the biggest moral problem with capitalism is the natural consequence of having enormous firms, what can we do to prevent firms from growing to that point? Why aren't modern companies hindered by their size?
+- One argument that we'll examine is that some regulations that are designed to limit how large a corporation can grow may actually subsidize the growth of some corporations.
+**** SUBMITTED [#A] Long Reply
+DEADLINE: <2020-02-26 Wed>
+:LOGBOOK:
+CLOCK: [2020-02-26 Wed 21:12]--[2020-02-26 Wed 22:22] =>  1:10
+:END:
+Does the nature of capitalism suggest it is incompatible with a just society?
+
+Long Reply: 3 Capitalism is not fundamentally incompatible with a just society, but it does carry inherent risks which could potentially lead to injustice.
+
+Fundamentally, capitalism as a system consisting of private ownership and voluntary exchange is not incompatible with a just society. The voluntary exchange element is particularly unimpeachable. One could simply state the meaning of the word 'justice' as the ideal that people should get what they deserve, and that infringing upon the autonomy of others should have consequences. Under this definition, any system that inherently guarantees autonomy over the exchange of personal goods is at least just to the extent that other elements of it are not unjust. The principle of private ownership is the element of capitalism that has the most potential to cause injustice. It is easy to imagine ways that arbitrary rules of ownership may potentially limit the autonomy of those who fail to satisfy those rules. If one were to imagine, for example, a system where all property were privately owned by local lords without the means for serfs to gain property of their own, the system in question could hardly be called one which preserves personal autonomy. The lords may be well within their legal rights to own the property that they do, which illuminates a fundamental pitfall associated with private ownership; How is property to be justly distributed? What can (or should) be done to prevent the accumulation of wealth by the few at the expense of the many? The difficulty with this problem is that any answer would run the risk of interfering with the price system, which is, at least theoretically, a very effective vehicle for ensuring the most efficient use of scarce resources. Most of us would agree that property *should* be owned by those who earn it via their hard work, intelligence, insight, perseverance, etc. The very nature of the right to transfer or exchange property at will (a fundamental aspect of ownership) makes that ideal extremely difficult to achieve, however. If individuals are free to transfer property at will, they will have the ability to transfer wealth to those have not earned it. Those individuals who have received wealth without earning it then have a competitive advantage over those who have to begin earning their wealth from nothing. It may be argued that people getting what they don't deserve doesn't mean that others can't get what they do deserve, but this is only true to an extent. It's conceivable that there is some point where an amount of hoarded wealth in the hands of small subset of the population could possibly overcome the benefits of the 'positive-sum' nature of markets. (7)
+
+Historically, it's easy to see examples of this situation in action. In the not-so-distant history of our country, there was a time contemptuously referred to as 'the gilded age.' From around the 1870's to about 1900, rapid economic growth and monopolization resulted in an era that has been metaphorically compared to something that is covered in a thin layer of gold, but is essentially worthless under the surface. Many have referred to some capitalists of the day as Robber Barons, so called for the unethical and oppressive (i.e. ostensibly unjust) methods that they used to accumulate wealth. According to the laws of the time, those individuals were only exercising their right to ownership and voluntary exchange to their advantage, but the effects of that were catastrophic for the enormous amount of impoverished citizens of the time. The situation highlights the idea that while the so-called robber barons may have voluntarily exchanged their time and effort for wealth, the poor were so limited in options that it would be a stretch to call what they needed to do to survive 'voluntary.' Is an exchange truly voluntary if the only alternative for one party is starvation or homelessness? Arguably, this situation may have been more the result of monopoly than capitalism, but it highlights the risk of monopoly that might be inherent in capitalism without government oversight. It also illustrates the danger that a firm seeking increased profits might try to do so by influencing government policies to serve their interest. Even though the gilded age came to end, it raises concerns about the possibility of corporations again using their vast resources to increase their wealth at the expense of the general public. (1)
+**** SUBMITTED [#A] Medium Replies
+DEADLINE: <2020-02-29 Sat>
+**** SUBMITTED [#A] Short Replies
+DEADLINE: <2020-02-29 Sat>
+** Week 7
+*** Assignments
+**** SUBMITTED [#A] Do all required readings
+DEADLINE: <2020-03-04 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-04 Wed 20:55]--[2020-03-04 Wed 21:37] =>  0:42
+CLOCK: [2020-03-04 Wed 13:58]--[2020-03-04 Wed 18:07] =>  4:09
+CLOCK: 
+:END:
+***** Notes
+****** What is Seen and What Is Not Seen - Bastiat
+- In economics, an act produces first a seen effect, and then an unseen one.
+- Economics is like health. Things which seem sweet at first glance can have bitter outcomes later on.
+******* The parable of the broken window
+- A man's son is careless and breaks his window. It might be said to him that it is good that the window broke, because the glazier now has work and will earn an income. It is true that the breaking of the window is good for the glazier, but does that mean that it is good for the economy to run around breaking windows? Obviously not. It may be good for the glazier, but it's bad for whoever else would have gotten the benefit of the money that was spent on the glass. Together, the benefit is a net zero.
+- Society has lost the value of the broken window.
+******* The discharging of 100,000 men
+- If we were to imagine discharging a large number of soldiers, there are many who would argue that doing so would hurt the economy because of the things produced to support those soldiers. Additionally, all those workers entering into the workforce will need jobs, which will depress wages and increase unemployment.
+- One could argue that moving the soldier and the taxes to support him to another place will cause a net zero impact, because even though one city lost a worker and taxes, the other city gained a soldier and his salary. This ignores what is not seen, namely that the society as a whole has lost out on 300 days of labor, and the associated production.
+******* The Useful Bureaucrat
+- A government official (or program) is not useful by the sole merit of it existing, even though people may argue that it has value do to the employment that it provides. Essentially, if the service that it provides is not useful to the taxpayer, the taxpayer is paying for nothing. Even though there is a benefit to those employed by the government, the net result is a loss. The bureaucrat will spend his salary, the taxpayers will provide goods. Effectively, they are getting their taxes back, but have lost the goods that they've provided.
+******* Borrowing
+- Bastiat argues that state-backed loans are bad, because anything that is purchased on credit by someone with a state-backed loaned is essentially taken from those without the state-backed loan. This logic is wrong, however. If a greater number of people have the means to purchase a good on credit, the demand for that good has gone up, and production will likewise increase. If the state were to give guaranteed loans for houses, there would be more people who are able to buy a house. Insightful businessmen would see that opportunity, and invest to build more houses. Supply usually rises to meet demand.
+- Bastiat's fundamental argument seems to be that we need to weigh the benefits of any public works project against the losses caused by the reduction in money by citizens who have been taxes. This is completely valid, *but* he seems like he's suggesting that the weight will never be in the favor of public works, or that it mostly won't be. He accuses his opposition of never having had this occur to them, but doesn't address the possibility that they are well aware of his points, have weighed the different benefits, and have decided that the public works program will result in greater utility for the people for the sum of money required than private spending would have.
+- We have to be careful with the assumption that all money in any hands equally increases jobs. It is true that if you take money from the hands of the working class, they will purchase less goods and services. What about those who have more wealth than they could possibly spend in a lifetime? If money is taken for them and a well-paying job is created, has a well-paying job also been lost? I'm not sure, it's not as easy to say.
+- In his argument about the wise and foolish brothers, he ignores something. The foolish brother spends all his money, and shortly is unable to further contribute to the economy. The wealthy brother saves, and is able to contribute a larger and larger amount each year. For someone who criticizes so frequently the idea that money disappears or appears when it is transferred, he does the same thing here. The wise brother's increase in wealth does not appear from thin air, but is given to him as a return on his investments. Whatever money he earns that the foolish brother does not still exists as if the foolish brother had earned it, but it exists in the hands of those who would have transferred their money to the foolish brother if he were more wise. In their hands, they are just as likely to spend it paying the wages of workers that the foolish brother would be if he had been wised and accumulated it. In other words, the wise brother has not generated any additional good in society compared to the foolish brother by dragonishly hoarding his wealth. In fact, the logical result of the perpetual accumulation of wealth in the hands of the wealthy is income inequality. A fantastically wealthy person may spend as much on a home and cars for himself as a small community would spend to happily satisfy them.
+- A lot of the 'you can't profit from the same transaction twice' talk could be solved with progressive tax policies.
+****** The Corporation Movie
+- The corporation is seen as an institution that creates great wealth, but causes huge harms.
+******* What is a corporation?
+- A group of people working together to gain large, growing, sustained, legal returns for the business owners.
+- Originally a group of people chartered by the state to build or develop something. Very limited in scope and time frame.
+- Recently, the Supreme Court has ruled that Corporations are people, giving them all rights guaranteed to people under the law.
+- Special kinds of persons that are designed by law to be only concerned with their stockholders.
+- "They have no soul to save and they have no body to incarcerate."
+- Corporations are required by law to put profit above all other concerns.
+- Externalities are effects on third parties by an interaction between two people.
+- Corporations are externalizing machines. It's not malevolent, that's what they're designed for.
+******* What causes corporations to behave as externalizing machines?
+- Callous unconcern for the feelings of others.
+- Incapacity to maintain enduring relationships.
+- Deceitfulness 
+- Failure to adhere to social norms and expectations.
+******* Externalities
+- Toxic chemicals cause cancer, birth defects, etc.
+- Industry has known about these risk and has attempted to trivialize them.
+- We are in the midst of a cancer epidemic, and there is enormous evidence that it is caused by industry. Those are externalities, which corporations are legally bound to care about less than profits.
+- Monsanto created a drug that caused cows to produce milk. It caused all kinds of painful problems for the cows. People get those chemicals through their food. Bad for the cow, bad for the farmer, bad for the consumer, but good for profits and so Monsanto is compelled to continue.
+- Monsanto created agent orange, which caused 50,000 birth defects, hundreds of thousands of cancers, and enormous harm and suffering to US and Vietnamese troops.
+- Pollution. Paper mill flushing waste down the river.
+- Our society is not flying because it's not built according to the laws of aerodynamics, and it's subject to gravity. All life forms and life support systems are in decline because of industry. We think we're flying because we can't see the ground.
+- These environmental externalities have been considered a form of tyrannical taxation without representation upon future generations.
+******* In short, corporations meet all of the qualifications for psychopathy. Who is to blame?
+- CEO claims that he has not nearly as much power as people think, but they are beholden to shareholders.
+- When you look at a corporation, as when you look at a slaveholder, you have to distinguish the individual from the institution. The individuals may be the nicest person in the world, but the institution is monstrous, which makes the individuals monsters.
+- A CEO says that all the things that the public hates, he hates too. An individual CEO may care about the environment, and they may even devote huge resources into making things better. That doesn't mean the corporation is not monstrous.
+- Monsanto's suicide seeds can be considered evil and monstrous, but they increase profits.
+- The fact that the majority of CEOs are rich white men means that they're out of touch with the majority of the world population.
+- Capitalists can reap enormous benefit from disasters and tragedies.
+******* Historical boundaries against extracting profit
+- In the medieval age, things were commonly believed to be 'commons,' things that were shared by everyone.
+- Over time, those commons have become more and more commodified.
+- When you take something that is publicly owned and used and put a fence around it, that's not wealth creation, that's wealth usurpation.
+- Public institutions have the ability to run at a loss if the positive externalities are worth it.
+******* Basic Training
+- Manipulating people into buying products is a problem.
+- A corporation did a study that was to help children nag their parents more effectively.
+- Marketers play to children's developmental weaknesses.
+******* Perception Management
+- Corporations don't advertise products, they advertise a desirable lifestyle.
+- Corporations do calculated good deeds to improve their image, but the purpose is only to increase their bottom line. They don't do it out an ethical drive to do good, which means that are almost certainly also doing bad things that increase their bottom line.
+- Branding is not advertising, it's production. The brand is a product, and it's the real thing that's being sold.
+- Disney is one example. Their brand is Family Magic. They don't create things that don't fit that brand under the Disney brand, they use a different name.
+******* Triumph of the Shill
+- Interactions that we believe are genuine are actually being commercialized. Undercover messaging, similar to product placement in movies, but done in reality.
+******* Advancing the Front
+- Corporations can patent organisms. Patent office claimed that you can't patent life, but they lost in the supreme court. Supreme court decided that you can patent anything that's alive, short of complete human beings.
+- Science, instead of the impartial pursuit of truth, has become the pursuit of profit.
+******* How can the public protect their right to have access to uncommodified information?
+- A story was told of a news organization that was told by their owners that they could research whatever they wanted and make a story on it. They looked at Monsanto's drug to increase cow milk production. They finished the story, it was about to air. They got a letter from a Monsanto lawyer threatening the news group. They reviewed it, and decided to air anyway. Got another letter from Monsanto saying there would be 'dire consequences' if they aired the story. Fox was afraid that they'd lose advertising dollars. Manager forced them to change it, and forced them to air false information.
+- We just paid $3 billion for these television stations. We'll tell you what the news is, we'll tell you what's true.
+- The team refused to lie, Fox threatened to fire them, they said they'd go to the FCC, then Fox tried to bribe them. Offered to pay them a bunch of money if they signed and said they'd never talk about the milk hormones again. They refused.
+- Forced them to remove the word cancer, and said that they couldn't specifically criticize Monsanto. Forced them to rewrite 83 times before saying they'd fire them for no cause.
+- Ended up going to jury trial. After appeals, it was ruled by the courts that lying on the news isn't against the law, and that Fox did nothing illegal.
+- rGBH is still in the US milk supply today.
+******* Expansion Plan
+- 2/3 of the global population may be without water by 2025. Corporation in San Francisco was able purchase all water rights in a Bolivian city, including rainwater.
+- People were not even able to collect rainwater.
+- Transnational corporations have a history of supporting oppressive governments if they increase their bottom lines.
+- Corporations loved Mussolini and Hitler.
+- Huge collusion existed between US corporations and Nazi Germany.
+- IBM hardware supported the recording of Nazi prisoners, IBM profited greatly.
+- IBM claims that they had no control over what the computers were used for. Contracts show that IBM actively supported their hardware at concentration camps.
+- Corporate allegiance to profits trumps their allegiance to any flag.
+******* Hostile Takeover
+- Corporations use US troops to improve foreign situations and allow them to extract more profits.
+- Representatives of some of America's top corporations tried to overthrow US government over new deal.
+- That is no longer necessary. Industry has successfully infiltrated US government.
+******* Democracy LTD
+- There is a claim that if a corporation does something it's not supposed to do, it will be punished in the market. This ignores externalities.
+- Social responsibility isn't a real shift, it's a reaction to the market.
+******* Psycho Therapies
+- Capital can be held accountable.
+- Laws can be made to dismantle enormous corporations. States have the power to revoke corporate charters.
+**** SUBMITTED [#A] Long Reply
+DEADLINE: <2020-03-04 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-04 Wed 21:37]--[2020-03-04 Wed 21:59] =>  0:22
+:END:
+Long Reply: 6 There are elements and consequences relating to capitalism that are incompatible with a just society.
+
+In it's purist and most simplistic form, the arguments for capitalism are compelling. The price system certainly appears to be marvelously efficient and fair. Voluntary exchange of property seems completely aligned with justice and morality. From an efficiency perspective, it's hard to find a compelling argument against capitalism, and if efficiency means more for everyone according to their hard work, daring, intelligence, etc., that certainly sounds like justice to me. I think the issues that present themselves over time in capitalist societies are results of certain 'externalities,' or effects upon those beyond the two parties who have voluntarily entered into an agreement. The Corporation documentary made some compelling points about the motivations of corporations under our current legal framework. Corporations are legally required to protect the interests of their shareholders above all others, which can have disastrous consequences. It could be argued that a truly competitive market will punish a corporation for externalities, but I'm unconvinced. Let's imagine two paper manufacturing corporations, PaperCo and Nestree. They've both been dumping waste into a local river for years, and even though it's killed all the fish and poisoned the local ecosystem, people don't seem to care enough to make the connection to the paper products they buy. One day, the CEO of Nestree starts to feel bad about all the dead fish and waterfowl, and decides that instead of dumping, they'll pay a waste disposal company to get rid of their waste in a sustainable way. Unfortunately, that costs quite a bit more than dumping, so Nestree is forced to raise the prices on their paper products in a noticeable way. They make sure to include on their packaging that they're doing some good work for the environment, but will that be enough to keep them in competition with the other companies? That seems unlikely to me. If the majority of consumers will willing to pay higher prices for goods that were better for the environment, we'd already have seen eco-friendly corporations taking over all manner of industries. Sadly, it appears to be some fundamental part of human nature that if person A has a deal with person B that they're happy with, they won't really be bothered if that deal has the potential to cause some harm to person C a few thousand miles away. Because of this fundamental aspect of human nature, any corporation who significantly raises prices or lowers quality to make sure that person C isn't harmed will not be able to compete with the companies who don't. Profit margins are already razor thin in highly competitive markets, there is very little room for including aspects of a deal that don't have any impact on the bottom line, and there is very little evidence that out-of-sight externalities have any impact on the bottom line for the majority of companies. In my mind, this is fundamentally unjust, and therefor is incompatible with a just society. Despite this, I don't believe the current climate of 'corporations are people' and 'protect profits or go to jail' is the only climate in which capitalism can exist. My mind is open to the idea that there may be solutions to these issues that still allow for capitalism to bring its benefits to our society. (5)
+
+It's another issue entirely that minorities in terms of race and class are disproportionately impacted by these externalities. To the extent that consumers do have the ability to impact corporate decisions, it's the average consumer that has that power. Corporations care when a majority of their customers are looking for change, but they are not particularly interested when a small subset of the population is being negatively impacted by their behaviors. For minorities, this poses a real problem. Minorities may have needs, issues or experiences that are unique to them, but rarely have the collective power to 'vote with their wallets.' This can result in a situation where minorities have no real voice in corporate behavior, and can become that 'person C' that is impacted negatively by deals between the majority and corporations.(3)
+**** SUBMITTED [#A] Medium and Short Replies
+DEADLINE: <2020-03-07 Sat>
+:LOGBOOK:
+CLOCK: [2020-03-07 Sat 15:07]--[2020-03-07 Sat 16:50] =>  1:43
+:END:
+Medium Reply
+Approach C: Interesting
+Hey Sophia,
+C1: I think you made some really interesting points here. One of the big things that stuck out to me was you talking about money circulating through the economy regardless of whether it's spent by consumers, saved by consumers, or spent by corporations. That's something that's been on my mind during these readings, particularly during Bastiat's essay. One increasingly hot topic in politics today is the potential for negative consequences of having ultra-wealthy business people. Many would claim (and I'm inclined to believe) that there is some harm to society caused by the skyrocketing wealth of a few and the stagnating wealth of the working class. It's an interesting point to think about "what's not seen," and how that relates to the investments and purchases of corporations that we may be inclined to distrust because of their wealth.
+
+C2: One concern that I think should be considered is the question of whether wealth in the hands the corporations and the rich actually does 'spend the same' as wealth more evenly distributed. One argument I've heard is that large corporations and the super-wealthy don't necessarily fund smaller businesses, especially local ones, the way the same wealth would in the hands of regular, everyday people. Simply put, if you or I had an extra $200 per month, we'd probably go to the movies a little bit more, maybe get our hair cut more often, go to more restaurants, etc. The argument is that if someone is worth $30 billion, that $200 per month is unlikely to increase the amount of regular goods and services that they purchase.
+
+C3: I'm not completely convinced by this argument, but I do believe that it presents a question that should be answered. According to Bastiat, that person worth $30 billion will still take that $200 and either save, spend or give it away, which will allow someone, somewhere to go to the movies a few extra times, or get an extra haircut. As a society, there will still be the same number of benefits produced. Despite this, it could be considered a negative that a disproportionate number of those 'satisfactions' go to the shrinking percentage of those with extravagant wealth.
+
+C4: In order to be convinced either way, as with most arguments, I'd want to see some concrete data. I'd be interested in the results of a study that examined the different ways that different socioeconomic classes of individuals, and corporations, contributed to local economies and the economy as a whole.
+
+Joe
+
+Short Reply
+Hey Sophia,
+Honestly, I'm right with you how you say that there are two valid sides to this issue. I appreciate how you pointed out that corporations seem to be getting better about environmental and animal treatment externalities, but I'm a little concerned that the positive changes we're seeing are just more marketing. Hopefully we can find a solution that results in externalities having an impact on corporations' bottom lines, because I think that's the only way they'll genuinely care about them.
+
+Joe
+
+Medium Reply
+Approach B: Agree
+Hey Ryan,
+B1: I agree that the evidence that we can see around us in the US today suggests that there are some fundamentally unjust elements of capitalism. The most obvious criticism of this viewpoint is that the injustices are not caused by capitalism itself, but are caused by market failures that are a result of overzealous regulation. According to those who hold these views, as long as there is competition, consumers will be able to punish immoral corporations by not supporting them, causing harm to their profits.
+
+B2: While I think there are merits to this argument, I'm not convinced that it represents every cause of injustice under capitalism. As you (and our readings) suggested, a corporation is highly incentivized to pursue profits at the expense of anything else. There are an innumerable number of ways that a corporation can control their image, hiding unethical behaviors from consumers and therefore protecting their profits. If it is more profitable for a corporation to participate in a harmful behavior and hide it than it is to substitute the harmful behavior for a harmless one, any good corporation under capitalism will almost certainly continue in the harmful behavior. Even if they seem to be making strides on the surface to reduce externalities, it is more than likely that what the consumer sees is only a calculated public relations strategy, and that the corporation really has no commitment to ethical behavior. Unfortunately, this seems to be a necessary truth due to 'shareholder rights' in the US, which can hold a corporation legally responsible for choosing ethics over profits, and thereby robbing shareholders of the largest possible return on their investments.
+
+Joe
+
+Medium Reply
+Approach A: Problematic
+Hey Elaf,
+A3: I think you make some good points, but there is one thing that you may have failed to consider. I agree that a fundamental part of any just society is that hard work is rewarded and that we're free from government control, but I'm not sure that capitalism always ensures those things. Regarding hard work, it certainly seems to me that US capitalism at least may not be treating everyone equally. It's not uncommon for someone to be extremely wealthy due to connections or financial help provided by wealthy parents. On the other hand, our country is full of single parents who work themselves to the bone, with little to show for it. Even in education, we see the difference in classes of students. Many students have to support themselves, which, if they don't take loans, requires them to work dozens of hours per week to stay alive and housed. Compared to their peers who are supported by wealthy parents, these students are at an enormous competitive disadvantage. They are more likely to be unable to participate in clubs and extracurriculars due to scheduling conflicts, they have less time to study and work on projects, and we can't ignore the mental health risks that come from having little to no time for recreation. These students may work significantly harder than an arbitrary student who's being supported, and yet get passed over for internship and employment opportunities due to poorer grades and lack of extracurricular activities. This situation is an unavoidable side-effect of the 'freedom to transfer' right of ownership of property that is part of capitalism.
+
+Joe
+
+Short Reply
+Hey Matthew,
+One thing that I really liked about your remarks is how you pointed out that under capitalism, corporations tend towards domination. If I'm not mistaken, that has a lot in common with one of Karl Marx's main criticisms of capitalism, namely the runaway-train accumulation of capital in the hands of a few. We have on our hands a system where there is huge incentive to accumulate wealth. This dynamic combines with the fundamental fact that under capitalism, the more wealth you have, the easier it is to generate more wealth to produce the problem that you mentioned. Without some force to apply an upper-limit to the amount of wealth that be consolidated under one individual (biological or legal), it is a reasonable concern that the consolidation of wealth could become a problem eventually.
+
+Joe
+
+Short Reply
+Hey Emanuel,
+I like that you pointed out that how successful those large businesses are, even though they're unethical. Unfortunately, consumers don't have a reliable way to access the information that they'd need to truly hold corporations accountable. Additionally, as you mentioned, the income inequality in our society has been worsening. It's easy to understand how a consumer may not have the head-space to worry about oppressed workers in south America when they're just trying to figure out how to make a paycheck cover expenses. It's hard to worry about people on the other side of the world when you're basic needs aren't being met. Additionally, there's a cost associated with shopping at places that at least market themselves as ethical alternatives, and someone who struggles to make ends meet might not be able to afford the premium.
+Joe
+
+** Week 8
+*** Assignments
+**** SUBMITTED [#A] Do all required readings
+DEADLINE: <2020-03-11 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-11 Wed 18:30]--[2020-03-11 Wed 20:24] =>  1:54
+CLOCK: [2020-03-09 Sat 17:34]--[2020-03-09 Sat 19:44] =>  2:10
+CLOCK: [2020-03-07 Sat 19:34]--[2020-03-07 Sat 19:44] =>  0:10
+:END:
+***** Notes
+****** [[https://www.cato-unbound.org/2008/11/10/roderick-t-long/corporations-versus-market-or-whip-conflation-now][Corporations versus the Market; or, Whip Conflation Now | Cato Unbound]] - Roderick T. Long
+- The free market is actually arguably bad for business. Competition exerts downward pressure on prices and upward pressure on salaries. 
+- Corporations having too much power is, according to the author, strictly the result of government intervention on the marketplace.
+- The article makes the argument that colossal firms are limited in size by diseconomies of scale. Similarly to previous readings, author claims that eventually corporations suffer from "calculational chaos stemming from absence of price feedback".
+- *In my opinion, effects of the information age and computing may be weakening that upper ceiling.*
+- Polluters are legally immune to lawsuits, which lowers the cost of the polution to the business and makes it more likely.
+- Loggers have taxpayer-funded roads, which lowers the cost of logging below the market value.
+- Wal-mart's low prices are partially a result of subsidies that they get from the government.
+- For example, Wal-Mart's free use of highways subsidizes their shipping costs, giving them an advantage over local businesses. *I'm not sure how true this is in California because of things like the gas tax, which effectively scales based on distance shipped.*
+- Author also argues that walmart keeps its prices low because of the low wages it pays to employees. Interestingly, they also argue that the reason they can pay low wages has to do with government intervention. Regulations, fees, licensure requirements, etc. are given as examples of things that disproportionately effect newcomers into a market, and therefore stymie competition.
+- In a free market, firms would be smaller, more local and more numerous. Competition would fix many of the problems that regulation tries to fix, but inadvertently worsens.
+- Author blames liberals as culprit #1 for the 'misunderstanding' that libertarians are corporate shills.
+- Culprit #2 in his opinion is the right. According to him, conservatives are partially responsible for reinforcing the idea that being for the free market means that one also supports corporate domination. Conservatives frequently cloak corporate protectionism in free-market rhetoric.
+- When conservatives talk about 'privatizing' an industry, they do so ambiguously. Privatization can have the libertarian meaning, which is to take an industry that is under government monopoly and subject it to free-market competition, but conservatives frequently use the word to mean contracting out, which is to say granting a government-sponsored monopoly to a single corporation.
+- Another word that conservatives misuse is deregulation. They frequently use the word, which should mean removal of government intervention in the sphere of voluntary exchange, to mean a change in government intervention.
+- One example of this is big-bank government bailouts.
+- The author names libertarians as culprit #3.
+- The term 'vulgar libertarianism' has been coined to describe the behavior of treating benefits of the free market as justifications for current corporatist society.
+- Those who are attracted to supporting free markets are lured into supporting plutocracy.
+- When people talk about capitalism today, there are a few things that they could mean. They could be talking about the free market in general, or they could be talking about the prevailing neomercantilist system. Usually, what they're referring to is an amalgamation of both.
+****** Economic Calculation in the Corporate Commonwealth - Kevin A Carson
+- The state, by artificially reducing the cost of large size and restraining the competitive ill effects of calculation problems, promotes larger size than would be the case in a free market - and with it calculation problems to a pathological extent.
+- *I'm not entirely convinced that this is the single cause of massive corporations, or even the largest cause. I'm sure libertarians love this because it conforms to their ideologies, but there are other schools of thought.*
+****** [[https://www.youtube.com/watch?v=iuawQiUlk2Q&feature=youtu.be][Phil 103: 4. corporations vs capitalism part 1 - YouTube]]
+- He wants to talk about the puzzle of how corporations get away with externalizing all sorts of harms, and how have they grown to be so large and powerful.
+- He says the answer should be the same, because the corporation gets away with externalities because they're so large. I disagree with this.
+- Documentary says that govt should limit corporations, Carson and Long say that government intervention causes these problems.
+- *THESIS* The market will force corporations to be ethical enough. This is completely false and a surprisingly bad argument.
+- "Why work for a company or buy from a company that treats their employees or customers badly? With the market, those corporations will fail." I'm not sure how someone can make that statement mere days after talking about externalities. Customers and employees are both first or second parties. By definition, externalities are effects on 3rd parties. The market turns corporations into externalizing machines.
+- Professor agrees that in most cases, this thesis is not true.
+******* Where does corporate power come from?
+******* How are they able to get away with abuses of power?
+******* Under what conditions would this power be sustainable?
+- Revised thesis: The market will force firms to be ethical enough *unless* these corporations are able to insulate themselves from competitive market pressures.
+******* Why would corporations want to insulate themselves?
+- Corporations fear competition because it suppresses profits.
+******* How do they insulate themselves?
+- Government privilege
+******* Pharma Bro Martin Shkreli
+- He purchased a company and raised the price of a drug from $13 to over $400
+- He was able to do this because of FDA regulation
+******* Long's version of this thesis:
+- Government privilege translates into corporate power, which translates into various social harms.
+******* Carson: Size *does* matter
+- Internal transactions remove the price system, which should make them less efficient.
+- Carson argues that the same sorts of arguments that are used against socialism should apply to corporations.
+**** SUBMITTED [#A] Long Reply
+DEADLINE: <2020-03-11 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-11 Wed 20:57]--[2020-03-11 Wed 21:15] =>  0:18
+:END:
+Long Reply: 3 The activity of corporations doesn't suggest that capitalism is entirely incompatible with a just society, but there are considerations that must go into making it so.
+
+PW: Fundamentally, corporations will always act in a way that furthers their own interests. In practice, this can be a double-edged sword. When the interests of corporations align with the interests of society, they can be an enormous positive force because of their efficiency. In this scenario, capitalism has significant advantages over centrally planned economic systems in advancing the standard of living of all participants. The caveat to this is that when it becomes more profitable for a corporation to act in an unjust way, they will be compelled to do so under capitalism. This can be mitigated through thoughtful state intervention, but that must be done extremely carefully. Applying artificial forces (like those that come from state intervention) into the market has the potential to upset the balance of profitability that makes capitalism an advantageous economic system in the first place. (5)
+
+GED: Personally, I found Long's article to be an interesting explanation of the philosophy of the deregulation of markets. Prior to reading it, I fell into the camp that he described as those who view individuals who advocated for deregulation with a high level of suspicion. In my mind, the only ones who benefited from relaxation of regulations were corporations and their shareholders. I hadn't realized that a dislike for anti-competitive business practices was exactly the idea that motivates many of those individuals. I'm still convinced that many regulations are important and effective, and I'm aware that many corporations fight tooth-and-nail to have the ones they dislike overturned. I'm now aware that it's also possible to seek for some deregulation for the exact opposite reason of protecting corporate interests. It's an interesting thought that perhaps the best way of regulation some behaviors is by forcing corporations to compete with each other for customers. (4)
+
+Joe 
+**** SUBMITTED [#A] Medium and Short Replies
+DEADLINE: <2020-03-14 Sat>
+** Week 9
+*** Assignments
+**** TODO [#A] Do all required readings
+DEADLINE: <2020-03-25 Wed>
+***** Notes
+**** TODO [#A] Long Reply
+DEADLINE: <2020-03-25 Wed>
+**** TODO [#A] Medium and Short Replies
+DEADLINE: <2020-03-28 Sat>
+** Week 10
+*** Assignments
+**** TODO [#A] Do all required readings
+DEADLINE: <2020-03-25 Wed>
+***** Notes
+**** TODO [#A] Long Reply
+DEADLINE: <2020-03-25 Wed>
+**** TODO [#A] Medium and Short Replies
+DEADLINE: <2020-03-28 Sat>
