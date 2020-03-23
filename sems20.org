@@ -1,4 +1,6 @@
 #+TODO: TODO WORKING FINISHED | SUBMITTED CANCELED MISSED
+#+TAGS: @home(h) @school(s) @csc60 @csc130 @csc131 @phils103
+#+TAGS: exam(e) quiz(q) homework(w) project(p)
 #+FILETAGS: :@school:
 
 * Calendar
@@ -10,11 +12,11 @@
 *** CSC 131 - Class                                               :@csc131:
 <2020-01-21 Mon 17:30 +1w><2020-01-23 Wed 17:30 +1w>
 ** Exams
-*** CSC60 - Midterm 1                                        :@csc60:@exam:
+*** CSC60 - Midterm 1                                         :@csc60:exam:
 <2020-02-24 Mon 17:30>
 *** CSC60 - Midterm 2
 <2020-03-25 Wed>
-*** CSC130 - Midterm                                        :@csc130:@exam:
+*** CSC130 - Midterm                                         :@csc130:exam:
 <2020-03-11 Wed>
 * CSC 60                                                             :@csc60:
 ** Assignments
@@ -263,7 +265,7 @@ DEADLINE: <2020-03-14 Sat>
 CLOCK: [2020-03-07 Sat 18:01]--[2020-03-07 Sat 19:27] =>  1:26
 :END:
 [[file:~/dev/60/pointers_array_assignment/pointers_arrays.c][C file]]
-*** TODO String library functions
+*** SUBMITTED String library functions
 DEADLINE: <2020-03-18 Wed>
 * CSC 130                                                           :@csc130:
 ** Assignments
@@ -923,10 +925,11 @@ Joe
 DEADLINE: <2020-03-14 Sat>
 ** Week 9
 *** Assignments
-**** TODO [#A] Do all required readings
+**** SUBMITTED [#A] Do all required readings
 DEADLINE: <2020-03-25 Wed>
 :LOGBOOK:
-CLOCK: [2020-03-22 Sun 15:23]
+CLOCK: [2020-03-22 Sun 20:05]--[2020-03-22 Sun 23:38] =>  3:33
+CLOCK: [2020-03-22 Sun 15:23]--[2020-03-22 Sun 18:25] =>  3:02
 :END:
 ***** Notes
 ****** The Tragedy of the Commons - Hardin
@@ -946,8 +949,24 @@ CLOCK: [2020-03-22 Sun 15:23]
 ******* Another example of the tragedy of the commons comes when we consider pollution.
 ******** A business will rationally find that the costs to itself of releasing pollution are less than the costs to itself of purifying that pollution before releasing it.
 ******* We must admit that our current system of capitalism plus inheritance is unjust. We put up with it because we are not convinced that anyone has come up with a better system.
-**** TODO [#A] Long Reply
+****** Governing the Commons - Ostrom
+******* Many solutions have been proposed for ensuring that the commons are fairly used and not overused.
+******* Some have argued for the "Leviathan" solution, i.e. the government regulating the usage of the commons.
+******* Others have argued for privatization, where the government divides the commons among it's users, who then exercise private property rights.
+******* Ostram argues that the correct solution is neither, because they both rely upon an external party. The best solution is a voluntary contract created and enforced by the users of the commons. (How is this different than regulations imposed by a democratically created government?)
+****** [[https://www.youtube.com/watch?v=G5AC77gElPQ&feature=youtu.be][Phil 103: 5. environmental harm part 1 - YouTube]]
+**** SUBMITTED [#A] Long Reply
 DEADLINE: <2020-03-25 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-22 Sun 23:40]--[2020-03-23 Mon 00:04] =>  0:24
+:END:
+***** Are markets more bad than good for the environment?
+
+Long Reply: 7 - As they currently exist in the United States, markets are significantly more bad than good for the environment.
+
+PW: Under the current system of largely statist capitalism in the United States, markets are measurably more bad than good for the environment. I don't think that this is a fundamental truth for any market that could exist anywhere in the world, but for markets to reduce negative effects on the environment, some action must be taken to circumvent the tragedy of the commons. Unfortunately, I don't think the United States (along with a large number of other industrialized nations) makes a meaningful effort to do so. The global environment is perhaps the greatest and most important commons that we have access to as a species. Observations that individuals in a commons will sacrifice the public good for personal benefit can certainly be seen to be true in corporate behavior, and it's not difficult to see why. As profit-seeking entities, corporations are bound by their nature to legally maximize shareholder returns at the expense of any other considerations. When corporations have a clear dominant strategy that involves producing pollution, they will invariably (and rationally) choose it as long as they're legally permitted to do so. While the U.S. has made some meaningful attempts to enact legislation that forces corporations to pay for negative externalities that they produce, I'm not convinced that those attempts have been successful overall. Carbon emissions alone are still overwhelmingly damaging to the global climate, and they are just one of possibly thousands of measurable ways that economic activity in the US is harming our available commons. (5)
+
+GED: Philosophically, the idea that markets are bad for the environment doesn't even necessarily require that one argues that they're behaving unethically. It's easy to look at a faceless corporation, see enormous profits and equally enormous environmental damage fueling those profits, and pass a moral judgment. Unfortunately, it may not be that simple. Without some solution, whether it's legislation, privatization, or a hybrid of the two, the dominant strategy for an arbitrary player regarding a commons may be to abuse it. The argument of whether or not it's moral or just for a player to make choose the dominant strategy misses the point, and is unnecessary. Expecting individuals (natural or otherwise) to chose strategies that are worse for them but better for the whole because it's moral to do so ends up creating a situation that favors immoral players. If we want markets to be better for the environment, we need to give them reasons to chose to do so that genuinely maximize their profits, and ideally that they're involved in the inception of. (4)
 **** TODO [#A] Medium and Short Replies
 DEADLINE: <2020-03-28 Sat>
 ** Week 10

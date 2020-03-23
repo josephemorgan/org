@@ -1,4 +1,5 @@
-#+TODO: TODO WORKING | RESOLVED CANCELED
+#+TODO: TODO ASSIGNED PENDING | RESOLVED CANCELED
+#+FILETAGS: :@school:@csc131:@EUC:
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="rethink.css" />
 #+OPTIONS: toc:nil num:nil html-style:nil
 
@@ -9,12 +10,16 @@
 ** [[file:userStories_teamName.docx][Sample User Stories]]
 ** [[file:dailyStandupRecord_teamName.docx][Sample Daily Standup]]
 ** [[https://codekleptos.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=EUC&view=planning&issueLimit=100&atlOrigin=eyJpIjoiNDczNDZiNzZjZDAxNGFhZDkyY2MxYjFlZDg1MGE5YWMiLCJwIjoiaiJ9][Jira project page]]
+
+* Calendar
+** Sprint Planning
+<2020-03-24 Tue 18:45 +1w>
 * Initial Planning
-** WORKING Create project backlog
-** TODO Set a date and time to do sprint planning.
-** TODO Set a time to do daily stand-ups.
-** TODO Set a date and time to do sprint review.
-** TODO Set a date and time to do sprint retrospective.
+** PENDING Create project backlog
+** RESOLVED Set a date and time to do sprint planning.
+** PENDING Set a time to do daily stand-ups.
+** RESOLVED Set a date and time to do sprint review.
+** RESOLVED Set a date and time to do sprint retrospective.
 * Backlog
 ** TODO [EUC-1] Display main window.
 ** TODO [EUC-2] Display text entry fields and buttons.
