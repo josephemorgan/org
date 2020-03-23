@@ -932,7 +932,20 @@ CLOCK: [2020-03-22 Sun 15:23]
 ****** The Tragedy of the Commons - Hardin
 ******* The problem of how large a population should be may be one which has no technical solution.
 ******* Some argue, as Adam Smith did regarding economics, that an *invisible hand* will guide reproduction to its optimum level, but Hardin argues that there is no evidence for this.
-******* 
+******* Tragedy of the Commons:
+******** A herdsman is expected to keep as much cattle as possible on the commons. Tribal wars, poaching and disease impose an upper limit on the amount of cattle that can be kept.
+******** Eventually, social stability eliminates those factors and allows herdsmen to keep as many cows as they like.
+******** The benefit of keeping an additional cow is almost one cow's worth of benefit, but the harm is small fraction of one cow's worth of harm, because the harm is spread between all users of the commons.
+******** Thus we find the tragedy of the commons; Each herdsman is locked in a system where they are compelled by reason to add an additional cow to their herd, but when each additional cow added causes harm to all.
+******* Examples of this tragedy can be seen in modern society.
+******** Over fishing of the oceans.
+******** Over grazing of public lands.
+******** Overuse of national parks.
+******* Users of those commons push harder and harder to add additional herds and fishing boats and guests, causing enormous damage.
+******* Conceivable solutions all have their own weaknesses.
+******* Another example of the tragedy of the commons comes when we consider pollution.
+******** A business will rationally find that the costs to itself of releasing pollution are less than the costs to itself of purifying that pollution before releasing it.
+******* We must admit that our current system of capitalism plus inheritance is unjust. We put up with it because we are not convinced that anyone has come up with a better system.
 **** TODO [#A] Long Reply
 DEADLINE: <2020-03-25 Wed>
 **** TODO [#A] Medium and Short Replies
