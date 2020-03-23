@@ -1,3 +1,4 @@
+#+TODO: TODO WORKING | RESOLVED CANCELED
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="rethink.css" />
 #+OPTIONS: toc:nil num:nil html-style:nil
 
@@ -7,14 +8,17 @@
 ** [[file:backlog_teamName.xlsx][Sample Backlog]]
 ** [[file:userStories_teamName.docx][Sample User Stories]]
 ** [[file:dailyStandupRecord_teamName.docx][Sample Daily Standup]]
+** [[https://codekleptos.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=EUC&view=planning&issueLimit=100&atlOrigin=eyJpIjoiNDczNDZiNzZjZDAxNGFhZDkyY2MxYjFlZDg1MGE5YWMiLCJwIjoiaiJ9][Jira project page]]
 * Initial Planning
-** Sprint Planning
-*** TODO Set a date and time to do sprint planning.
-** Daily Stand-Up
-*** TODO Set a time to do daily stand-ups.
-** Sprint Review
-*** TODO Set a date and time to do sprint review.
-** Sprint Retrospective.
-*** TODO Set a date and time to do sprint retrospective.
+** WORKING Create project backlog
+** TODO Set a date and time to do sprint planning.
+** TODO Set a time to do daily stand-ups.
+** TODO Set a date and time to do sprint review.
+** TODO Set a date and time to do sprint retrospective.
 * Backlog
+** TODO [EUC-1] Display main window.
+** TODO [EUC-2] Display text entry fields and buttons.
 * Sprint 1
+* Useful links
+** [[https://github.com/aiobofh/bltools][GitHub - aiobofh/bltools: Emacs org-mode text-file Scrum backlog tools]]
+** [[https://www.atlassian.com/agile/tutorials/how-to-do-scrum-with-jira-software][Learn scrum with Jira Software | Atlassian]]

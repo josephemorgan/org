@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -it -p 8085:80 webserver-image:v1
+docker run -d -p 8085:80 -v "/home/joe/org/teamProject/":/usr/local/apache2/htdocs/ httpd

@@ -925,7 +925,14 @@ DEADLINE: <2020-03-14 Sat>
 *** Assignments
 **** TODO [#A] Do all required readings
 DEADLINE: <2020-03-25 Wed>
+:LOGBOOK:
+CLOCK: [2020-03-22 Sun 15:23]
+:END:
 ***** Notes
+****** The Tragedy of the Commons - Hardin
+******* The problem of how large a population should be may be one which has no technical solution.
+******* Some argue, as Adam Smith did regarding economics, that an *invisible hand* will guide reproduction to its optimum level, but Hardin argues that there is no evidence for this.
+******* 
 **** TODO [#A] Long Reply
 DEADLINE: <2020-03-25 Wed>
 **** TODO [#A] Medium and Short Replies
