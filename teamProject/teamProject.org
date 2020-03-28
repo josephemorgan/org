@@ -18,7 +18,15 @@
 ** Sprint Planning                                                 :meeting:
 <2020-03-24 Tue 18:45 +1w>
 * Backlog                                                           :backlog:
-
+** TODO [EUC-8]Enter electricity rates and hourly electricity usage (1 day)
+** TODO [EUC-11]Enter electricity rates and hourly electricity usage (multiple days)
+** TODO [EUC-12]Calculate daily usage (in kWh)
+** TODO [EUC-14]Calculate total usage (in kWh)
+** TODO [EUC-13]Calculate daily cost in $
+** TODO [EUC-15]Calculate total cost in $
+** TODO [EUC-6]Parse JSON file
+** TODO [EUC-17]Refine UI
+** TODO [EUC-16]Convert UTC time to usable time
 * Initial Planning Meeting                                          :meeting:
 ** RESOLVED Create project backlog
 ** RESOLVED Set a date and time to do sprint planning.
@@ -33,7 +41,7 @@
 - Discussed using how/when we'd handle daily stand-ups. Considered synchronous vs asynchronous, decided to leave the decision pending until class on Tuesday.
 - Verified that everyone was able to clone skeleton repository, compile and execute.
 * Sprint 1
-** ASSIGNED [EUC-1] Display main window.
+** RESOLVED [EUC-1] Display main window.
 ** ASSIGNED [EUC-2] Display text entry fields and buttons.
 * Sprint 2 Planning
 ** TODO Talk about [[file:sequence_diagram.jpg][sequence diagram]].
