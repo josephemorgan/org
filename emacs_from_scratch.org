@@ -1,0 +1,40 @@
+#+TITLE: Emacs From Scratch Notes
+#+author: Joseph Morgan
+#+date: <2022-01-07 Fri>
+
+* Emacs From Scratch #5: Org Mode Basics
+
+Added org specific package source to package_init.el.
+
+** How to use Org Mode
+
+[[https://devhints.io/org-mode][Org Mode cheatsheet]]
+[[https://gist.github.com/drj42/1755992][Org Mode Reference Card]]
+
+*** Code in Org
+
+C-c C-c to execute code in blocks.
+#+begin_src emacs-lisp
+  (defun my-elisp-func ()
+    (message "Hello!"))
+#+end_src
+
+#+RESULTS:
+
+* Emacs From Scratch #7: Configure Everything with Org Babel
+
+** Structure Templates
+
+To enable shortcuts for creating babel sections, add this to your configuration:
+
+#+begin_src emacs-lisp
+  (require 'org-tempo)
+
+  (add-to-list 'org-structure-template-alist  '("sh" . "src shell"))
+  (add-to-list 'org-structure-template-alist  '("el" . "src emacs-lisp"))
+  (add-to-list 'org-structure-template-alist  '("py" . "src python"))
+#+end_src
+
+** Putting Emacs configuration in an org file
+
+You can use org mode to write your Emacs configuration. Just add blocks of code to emacs, and call ~org-babel-tangle~, or ~C-c C-v t.~ For an example of this, [[file:config/Packages.org][see here]]. This same thing can be done for other files by changing the ~:tangle~ property at the top of the file.

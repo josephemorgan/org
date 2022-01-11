@@ -1,0 +1,6 @@
+* Active
+** TODO Read Intrduction to Algorithms (AKA CLRS)
+SCHEDULED: <2022-01-13 Thu>
+** TODO Read cracking the coding interview
+* Backlog
+** TODO Integrate org mode with google calendar using calendar API.
