@@ -64,41 +64,42 @@ Imports and configures the org package.
 
 #+begin_src emacs-lisp
 
-      (use-package org
-        :ensure t
-        :config (setq org-ellipsis " ▼"
-                      org-hide-emphasis-markers t
-                      org-agenda-files '("~/org/")
-                      org-startup-indented 1
-                      org-startup-folded 1
-                      org-default-notes-file (concat org-directory "/inbox.org")
-                      org-agenda-window-setup 'only-window
-                      org-export-with-section-numbers nil
-                      org-deadline-warning-days 28
-                      org-agenda-custom-commands '(("D" "Upcoming Deadlines" tags "DEADLINE>=\"<today>\""))
-                      org-file-apps '((auto-mode . emacs)
-                                      (directory . emacs)
-                                      ("\\.mm\\'" . default)
-                                      ("\\.x?html?\\'" . default)
-                                      ("\\.pdf\\'" . "zathura \"%s\"")))
-        (define-key global-map "\C-cc" 'org-capture)
-        (global-set-key (kbd "C-c l") 'org-store-link)
-        (global-set-key (kbd "C-c a") 'org-agenda)
-        (global-set-key (kbd "C-c c") 'org-capture)
-        (org-babel-do-load-languages
-         'org-babel-load-languages
-         '((C . t)
-           (java . t)
-           (shell . t)
-           (emacs-lisp . t)
-           (python . t)))
-        (setq org-confirm-babel-evaluate nil)
-        (require 'org-tempo)
-        (add-to-list 'org-structure-template-alist  '("sh" . "src shell"))
-        (add-to-list 'org-structure-template-alist  '("el" . "src emacs-lisp"))
-        (add-to-list 'org-structure-template-alist  '("py" . "src python"))
-        (add-hook 'org-mode-hook #'config/org-font-setup)
-        (add-hook 'org-mode-hook #'turn-on-flyspell))
+  (use-package org
+    :ensure t
+    :config (setq org-ellipsis " ▼"
+                  org-hide-emphasis-markers t
+                  org-agenda-files '("~/org/")
+                  org-startup-indented 1
+                  org-startup-folded 1
+                  org-default-notes-file (concat org-directory "/inbox.org")
+                  org-agenda-window-setup 'only-window
+                  org-export-with-section-numbers nil
+                  org-deadline-warning-days 28
+                  org-format-latex-options (plist-put org-format-latex-options :scale 1.25)
+                  org-agenda-custom-commands '(("D" "Upcoming Deadlines" tags "DEADLINE>=\"<today>\""))
+                  org-file-apps '((auto-mode . emacs)
+                                  (directory . emacs)
+                                  ("\\.mm\\'" . default)
+                                  ("\\.x?html?\\'" . default)
+                                  ("\\.pdf\\'" . "zathura \"%s\"")))
+    (define-key global-map "\C-cc" 'org-capture)
+    (global-set-key (kbd "C-c l") 'org-store-link)
+    (global-set-key (kbd "C-c a") 'org-agenda)
+    (global-set-key (kbd "C-c c") 'org-capture)
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((C . t)
+       (java . t)
+       (shell . t)
+       (emacs-lisp . t)
+       (python . t)))
+    (setq org-confirm-babel-evaluate nil)
+    (require 'org-tempo)
+    (add-to-list 'org-structure-template-alist  '("sh" . "src shell"))
+    (add-to-list 'org-structure-template-alist  '("el" . "src emacs-lisp"))
+    (add-to-list 'org-structure-template-alist  '("py" . "src python"))
+    (add-hook 'org-mode-hook #'config/org-font-setup)
+    (add-hook 'org-mode-hook #'turn-on-flyspell))
 
 #+end_src
 
@@ -153,6 +154,7 @@ Takes a link from the clipboard, tries to resolve it to get the title, and store
   (use-package evil
     :ensure t
     :init
+    (setq evil-respect-visual-line-mode t) 
     (setq evil-want-C-i-jump 't)
     (setq evil-want-keybinding nil)
     (setq evil-emacs-state-modes (delq 'ibuffer-mode evil-emacs-state-modes))
@@ -243,10 +245,10 @@ Magit is an interface to the version control system git.
 
 #+begin_src emacs-lisp
 
-(use-package magit
-  :ensure t
-  :config
-  (global-set-key (kbd "C-x g") 'magit-status))
+  (use-package magit
+    :ensure t
+    :config
+    (global-set-key (kbd "C-x g") 'magit-status))
 
 #+end_src
 
@@ -325,12 +327,12 @@ More friendly interface for ivy
 
 #+begin_src emacs-lisp
 
-(use-package ivy-rich
-  :ensure t
-  :after ivy
-  :init (ivy-rich-mode 1)
-  :custom
-  (ivy-virtual-abbreviate 'full-ivy-rich-path-style 'abbrev))
+  (use-package ivy-rich
+    :ensure t
+    :after ivy
+    :init (ivy-rich-mode 1)
+    :custom
+    (ivy-virtual-abbreviate 'full-ivy-rich-path-style 'abbrev))
 
 #+end_src
 
@@ -342,13 +344,13 @@ More friendly interface for ivy
 
 #+begin_src emacs-lisp
 
-(use-package counsel
-  :ensure t
-  :after ivy
-  :config
-  (counsel-mode t)
-  (counsel-projectile-mode t)
-  :bind (("C-c k" . counsel-ag)))
+  (use-package counsel
+    :ensure t
+    :after ivy
+    :config
+    (counsel-mode t)
+    (counsel-projectile-mode t)
+    :bind (("C-c k" . counsel-ag)))
 
 #+end_src
 
@@ -374,17 +376,17 @@ Projectile is a project interaction library for Emacs. Its goal is to prive a ni
 
 #+begin_src emacs-lisp
 
-(use-package projectile
-  :ensure t
-  :diminish projectile-mode
-  :config (projectile-mode)
-  :custom (projectile-completion-system 'ivy)
-  :bind-keymap
-  ("C-c p" . projectile-command-map)
-  :init
-  (when (file-directory-p "~/dev/")
-    (setq projectile-project-search-path '("~/dev")))
-  (setq projectile-switch-project-action #'projectile-dired))
+  (use-package projectile
+    :ensure t
+    :diminish projectile-mode
+    :config (projectile-mode)
+    :custom (projectile-completion-system 'ivy)
+    :bind-keymap
+    ("C-c p" . projectile-command-map)
+    :init
+    (when (file-directory-p "~/dev/")
+      (setq projectile-project-search-path '("~/dev")))
+    (setq projectile-switch-project-action #'projectile-dired))
 
 #+end_src
 
@@ -398,11 +400,11 @@ Elpy is the Emacs Python Development Environment.
 
 #+begin_src emacs-lisp
 
-(use-package elpy
-  :ensure t
-  :defer t
-  :init
-  (elpy-enable))
+  (use-package elpy
+    :ensure t
+    :defer t
+    :init
+    (elpy-enable))
 
 #+end_src
 
@@ -426,16 +428,16 @@ Helpful is an alternative to the built-in Emacs help that provides much more con
 
 #+begin_src emacs-lisp
 
-(use-package helpful
-  :ensure t
-  :custom
-  (counsel-describe-function-function #'helpful-callable)
-  (counsel-describe-variable-function #'helpful-variable)
-  :bind
-  ([remap describe-function] . counsel-describe-function)
-  ([remap describe-command] . helpful-command)
-  ([remap describe-variable] . counsel-describe-variable)
-  ([remap describe-key] . helpful-key))
+  (use-package helpful
+    :ensure t
+    :custom
+    (counsel-describe-function-function #'helpful-callable)
+    (counsel-describe-variable-function #'helpful-variable)
+    :bind
+    ([remap describe-function] . counsel-describe-function)
+    ([remap describe-command] . helpful-command)
+    ([remap describe-variable] . counsel-describe-variable)
+    ([remap describe-key] . helpful-key))
 
 #+end_src
 
@@ -447,10 +449,10 @@ VS Dark Theme is a dark mode theme based off of Visual Studio
 
 #+begin_src emacs-lisp
 
-(use-package vscdark-theme
-  :ensure t
-  :config
-  (load-theme 'vscdark t))
+  (use-package vscdark-theme
+    :ensure t
+    :config
+    (load-theme 'vscdark t))
 
 #+end_src
 
@@ -462,12 +464,12 @@ A theme megapack for GNU Emacs.
 
 #+begin_src emacs-lisp
 
-(use-package doom-themes
-  :ensure t
-  :config
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t)
-  (load-theme 'doom-one t))
+  (use-package doom-themes
+    :ensure t
+    :config
+    (setq doom-themes-enable-bold t
+          doom-themes-enable-italic t)
+    (load-theme 'doom-one t))
 
 #+end_src
 
@@ -479,12 +481,12 @@ A replacement for the standard Emacs modeline that is inspired by minimalism des
 
 #+begin_src emacs-lisp
 
-(use-package doom-modeline
-  :ensure t
-  :custom
-  (doom-modeline-height 10)
-  :config (setq doom-modeline-icon (display-graphic-p))
-  :hook (after-init . doom-modeline-mode))
+  (use-package doom-modeline
+    :ensure t
+    :custom
+    (doom-modeline-height 10)
+    :config (setq doom-modeline-icon (display-graphic-p))
+    :hook (after-init . doom-modeline-mode))
 
 #+end_src
 
@@ -497,10 +499,85 @@ Flycheck is a modern on-the-fly syntax checking extension for GNU Emacs.
 
 #+begin_src emacs-lisp
 
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode))
+  (use-package flycheck
+    :ensure t
+    :init
+    (global-flycheck-mode))
 
+#+end_src
+
+* Org Roam
+
+[[https://www.orgroam.com/manual.html#Installing-from-MELPA][Org-roam User Manual]]
+
+Org Roam is a networked knowledge system built on org mode.
+
+#+begin_src emacs-lisp
+
+  (use-package org-roam
+    :ensure t
+    :custom
+    (org-roam-directory (file-truename "~/roam"))
+    :bind (("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n g" . org-roam-graph)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n c" . org-roam-capture)
+           ;; Dailies
+           ("C-c n j" . org-roam-dailies-capture-today))
+    :config
+    (org-roam-db-autosync-mode)
+    ;; If using org-roam-protocol
+    (require 'org-roam-protocol)
+
+#+end_src
+
+** Configuring where the org roam buffer shows up
+
+#+begin_src emacs-lisp
+
+  (add-to-list 'display-buffer-alist
+               '("\\org-roam\\*"
+                 (display-buffer-in-direction)
+                 (direction . bottom)
+                 (window-height . 0.25)))
+
+#+end_src
+
+** Configuring Org Roam Dailies
+
+[[id:e907f077-060f-47ab-8e72-d5adbba3198e][Org Roam Dailies]]
+
+#+begin_src emacs-lisp
+
+  (setq org-roam-dailies-directory "daily/")
+
+  (setq org-roam-dailies-capture-templates
+        '(("d" "default" entry
+           "* %?"
+           :target (file+head "%<%Y-%m-%d>.org"
+                              "#+title: %<%Y-%m-%d>\n")))))
+
+#+end_src
+
+* Org Roam UI
+
+[[https://github.com/org-roam/org-roam-ui][GitHub - org-roam/org-roam-ui: A graphical frontend for exploring your org-ro...]]
+
+#+begin_src emacs-lisp
+  (use-package websocket
+    :after org-roam)
+
+  (use-package org-roam-ui
+  :after org-roam ;; or :after org
+  ;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+  ;;         a hookable mode anymore, you're advised to pick something yourself
+  ;;         if you don't care about startup time, use
+  ;;  :hook (after-init . org-roam-ui-mode)
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
 #+end_src
 

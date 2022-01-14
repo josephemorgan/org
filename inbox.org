@@ -1,0 +1,12 @@
+* Tasks
+** TODO Create a reading inbox to capture possibly-useful references
+  [2022-01-13 Thu]
+  [[file:~/roam/20220113154451-evergreen_notes.org::*Implementing an evergreen note practice][Implementing an evergreen note practice]]
+** TODO Figure out how I want to handle general org agenda tasks.
+
+Should I have a general.org? Do I take any notes in it, or should I only take notes in org roam? What should be in it?
+  [2022-01-13 Thu]
+  [[file:~/roam/20220113154116-how_to_take_smart_notes_with_org_mode.org::*How Jethro takes notes][How Jethro takes notes]]
+** TODO Learn how to tag org roam files
+  [2022-01-13 Thu]
+  [[file:~/roam/20220113154116-how_to_take_smart_notes_with_org_mode.org::*How Jethro takes notes][How Jethro takes notes]]

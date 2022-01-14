@@ -1,0 +1,26 @@
+#+title: Getting Started with Org Roam
+#+author Joseph Morgan
+
+Org Roam is self-styled as "a plain text knowledge management system." It builds on the foundation established by ~org-mode~ to allow notes be taken in the "Zettelkasten" method. In Zettelkasten, small notes (or zettels) are linked together to create a knowledge network.
+
+A basic configuration:
+
+#+begin_src emacs-lisp
+
+  (use-package org-roam
+    :ensure t
+    :custom
+    (org-roam-directory (file-truename "~/roam"))
+    :bind (("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n g" . org-roam-graph)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n c" . org-roam-capture)
+           ;; Dailies
+           ("C-c n j" . org-roam-dailies-capture-today))
+    :config
+    (org-roam-db-autosync-mode)
+    ;; If using org-roam-protocol
+    (require 'org-roam-protocol))
+
+#+end_src
